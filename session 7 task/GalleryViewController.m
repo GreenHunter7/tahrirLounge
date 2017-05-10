@@ -20,13 +20,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    
-//    
-//    UIGraphicsBeginImageContext(_sideBarButton.image.size);
-//    [_sideBarButton.image drawInRect:CGRectMake(0, 10, 30, 30)];
-//    _sideBarButton.image = UIGraphicsGetImageFromCurrentImageContext();
-//    UIGraphicsEndImageContext();
-//    		
+
+		
     //[self.navigationController.navigationBar addSubview:containerForMenu];
     
     [_popupContainerView setHidden:YES];
@@ -37,9 +32,10 @@
     
     ImageArray = [[NSArray alloc]initWithObjects:@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9", nil];
     
-    
     [_ImagesCollectionView setDelegate:self];
     [_ImagesCollectionView setDataSource:self];
+    
+    
     
 }
 
@@ -63,7 +59,6 @@
     
     
     OffsetImages=0; //its for ontimer method to move images
-    
     
     
     [self SlideImageView];
@@ -109,15 +104,8 @@
     
 }
 
--(void) backgrond{
-    for (NSInteger i; i<ImageArray.count; i++) {
-        UIImage* imagebackgrond = [UIImage imageNamed:[ImageArray objectAtIndex:i]];
-        
-        
-    }
-    
-}
 
+    
 
 /*
 #pragma mark - Navigation
@@ -143,23 +131,28 @@
     imageForCell.contentMode = UIViewContentModeScaleAspectFit;
     
     
-    GalleryCellCollectionViewCell  *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdeintifier forIndexPath:indexPath];
+    cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdeintifier forIndexPath:indexPath];
+    
+    
     
     [cell.viewContainer addSubview:imageForCell];
+    
 
+    
     imageForCell.frame = CGRectMake(0, 0,cell.frame.size.width,cell.frame.size.height);
 
-    cell.contentMode  = UIViewContentModeScaleToFill;
+    //cell.contentMode  = UIViewContentModeScaleToFill;
     
-    cell.layer.cornerRadius = 65;
     
     [cell.viewContainer.layer setShadowOffset:CGSizeMake(0.0f,0.0f)];
     cell.viewContainer.layer.shadowOpacity=0.8;
-
+    
+    
+    
+    
+    
     return cell;
 }
-
-
 
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
@@ -167,15 +160,17 @@
     [self showAnimated];
     //[_popupContainerView setHidden:NO];
     
-     NSString *cellIdeintifier =  @"cellImage";
+    
     
     
     _popupImageView =[[UIImageView alloc]initWithImage:[UIImage imageNamed:ImageArray[indexPath.item]]];
     _popupImageView.contentMode = UIViewContentModeScaleAspectFit;
     _popupImageView.frame = CGRectMake(0, 0, _popupContainerView.frame.size.width, _popupContainerView.frame.size.height);
     
-    _popupImageView.backgroundColor = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdeintifier forIndexPath:indexPath].backgroundColor;
+    
     //shadow for view
+    UIImageView *containerBackground = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Gallery-1"]];
+    
     [_popupContainerView.layer setShadowOffset:CGSizeMake(0.0f,0.0f)];
     _popupContainerView.layer.shadowOpacity=0.8;
     
@@ -183,8 +178,11 @@
     [_popupContainerView addSubview:_CloseButton];
   
     _popupContainerView.layer.cornerRadius = 8.0f;
+    containerBackground.layer.cornerRadius = 8.0f;
     _CloseButton.layer.cornerRadius=10;
     
+    containerBackground.frame = CGRectMake(0, 0, _popupContainerView.frame.size.width, _popupContainerView.frame.size.height) ;
+    [_popupContainerView insertSubview:containerBackground belowSubview:_popupImageView];
 }
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
@@ -201,7 +199,7 @@
    
     CGFloat screenWidth = self.view.frame.size.width;
     
-    CGFloat cellWidth = screenWidth / 3;
+    CGFloat cellWidth = screenWidth / 4;
     
     
     return CGSizeMake(cellWidth, cellWidth);

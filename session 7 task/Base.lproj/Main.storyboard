@@ -124,7 +124,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="c93-Y4-HDa">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Gallery-1" translatesAutoresizingMaskIntoConstraints="NO" id="c93-Y4-HDa">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="c93-Y4-HDa" secondAttribute="height" multiplier="9:16" id="fJb-6E-sBT"/>
@@ -146,25 +146,25 @@
                                     <constraint firstAttribute="bottom" secondItem="2xc-Da-mpC" secondAttribute="bottom" id="uh6-vB-Lfb"/>
                                 </constraints>
                             </scrollView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="sO3-6W-E02">
-                                <rect key="frame" x="0.0" y="432" width="414" height="304"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="sO3-6W-E02">
+                                <rect key="frame" x="10" y="432" width="394" height="304"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="O2b-qK-Qo7">
-                                    <size key="itemSize" width="120" height="120"/>
+                                    <size key="itemSize" width="100" height="100"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cellImage" id="6oW-wW-N0S" customClass="GalleryCellCollectionViewCell">
-                                        <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="v1X-yc-iQv">
-                                                    <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 </view>
                                             </subviews>
@@ -216,23 +216,24 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.0039215686274509803" green="0.49019607843137253" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.1707109815" green="0.32465918739999999" blue="0.64890932459999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="bwa-nc-H2d" firstAttribute="leading" secondItem="6Eu-u7-jSP" secondAttribute="leading" id="6Q5-4m-Kna"/>
                             <constraint firstItem="sO3-6W-E02" firstAttribute="top" secondItem="bwa-nc-H2d" secondAttribute="bottom" id="6ez-1M-pCh"/>
                             <constraint firstItem="c93-Y4-HDa" firstAttribute="centerY" secondItem="6Eu-u7-jSP" secondAttribute="centerY" id="EP8-Fd-v5j"/>
                             <constraint firstItem="c93-Y4-HDa" firstAttribute="height" secondItem="6Eu-u7-jSP" secondAttribute="height" id="HTL-P6-Lpx"/>
+                            <constraint firstItem="bwa-nc-H2d" firstAttribute="width" secondItem="6Eu-u7-jSP" secondAttribute="width" id="I9d-8M-g1D"/>
                             <constraint firstItem="c93-Y4-HDa" firstAttribute="centerX" secondItem="6Eu-u7-jSP" secondAttribute="centerX" id="KMO-p5-7IM"/>
-                            <constraint firstAttribute="trailing" secondItem="sO3-6W-E02" secondAttribute="trailing" id="LJW-To-ecl"/>
-                            <constraint firstItem="bwa-nc-H2d" firstAttribute="leading" secondItem="6Eu-u7-jSP" secondAttribute="leading" id="ODL-a1-1A6"/>
+                            <constraint firstAttribute="trailing" secondItem="sO3-6W-E02" secondAttribute="trailing" constant="10" id="R4k-ph-Nkp"/>
                             <constraint firstItem="c93-Y4-HDa" firstAttribute="width" secondItem="6Eu-u7-jSP" secondAttribute="width" id="YQW-OB-klX"/>
                             <constraint firstAttribute="trailing" secondItem="7Il-f4-6VN" secondAttribute="trailing" constant="15.5" id="Ygt-NX-SN1"/>
                             <constraint firstItem="bwa-nc-H2d" firstAttribute="height" secondItem="6Eu-u7-jSP" secondAttribute="height" multiplier="1:2" id="d38-wn-yix"/>
+                            <constraint firstItem="sO3-6W-E02" firstAttribute="leading" secondItem="6Eu-u7-jSP" secondAttribute="leading" constant="10" id="i4C-gr-eh4"/>
                             <constraint firstItem="bwa-nc-H2d" firstAttribute="top" secondItem="NPx-Zb-0jt" secondAttribute="bottom" id="jIG-wS-MxV"/>
-                            <constraint firstItem="sO3-6W-E02" firstAttribute="leading" secondItem="6Eu-u7-jSP" secondAttribute="leading" id="kUC-sc-9pr"/>
+                            <constraint firstAttribute="trailing" secondItem="bwa-nc-H2d" secondAttribute="trailing" id="o3e-5N-udj"/>
                             <constraint firstItem="7Il-f4-6VN" firstAttribute="leading" secondItem="6Eu-u7-jSP" secondAttribute="leading" constant="15.5" id="pC3-JD-PYD"/>
                             <constraint firstAttribute="bottom" secondItem="sO3-6W-E02" secondAttribute="bottom" id="uu7-EI-A2F"/>
                             <constraint firstItem="8ap-w8-RSI" firstAttribute="top" secondItem="7Il-f4-6VN" secondAttribute="bottom" constant="134" id="xGH-4h-75P"/>
-                            <constraint firstAttribute="trailing" secondItem="bwa-nc-H2d" secondAttribute="trailing" id="zof-C5-cg5"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -253,7 +254,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QTv-9E-RTb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4861" y="-3288"/>
+            <point key="canvasLocation" x="4860.8695652173919" y="-3288.5869565217395"/>
         </scene>
         <!--Seconde View Controller-->
         <scene sceneID="1Ns-xV-sLk">
@@ -901,7 +902,7 @@
                                         </constraints>
                                     </view>
                                     <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="aGF-WI-qnh">
-                                        <rect key="frame" x="-8" y="400" width="430" height="336"/>
+                                        <rect key="frame" x="10" y="400" width="394" height="262"/>
                                     </mapView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -909,7 +910,7 @@
                                     <constraint firstItem="fR6-zc-TTB" firstAttribute="leading" secondItem="WWg-aV-pH9" secondAttribute="leading" id="3Rl-hl-V2g"/>
                                     <constraint firstItem="bvd-1t-Ec1" firstAttribute="leading" secondItem="cOv-ZJ-urq" secondAttribute="leading" id="6fi-Mb-mcF"/>
                                     <constraint firstItem="yhb-QQ-Vh6" firstAttribute="leading" secondItem="WWg-aV-pH9" secondAttribute="leadingMargin" id="7LJ-yf-V9U"/>
-                                    <constraint firstItem="aGF-WI-qnh" firstAttribute="trailing" secondItem="WWg-aV-pH9" secondAttribute="trailingMargin" constant="16" id="82F-Gz-kb1"/>
+                                    <constraint firstAttribute="trailing" secondItem="aGF-WI-qnh" secondAttribute="trailing" constant="10" id="97J-51-W3A"/>
                                     <constraint firstAttribute="trailing" secondItem="fR6-zc-TTB" secondAttribute="trailing" id="9X1-5c-YJd"/>
                                     <constraint firstItem="fR6-zc-TTB" firstAttribute="leading" secondItem="WWg-aV-pH9" secondAttribute="leading" id="9g2-jq-Yls"/>
                                     <constraint firstItem="yhb-QQ-Vh6" firstAttribute="trailing" secondItem="WWg-aV-pH9" secondAttribute="trailingMargin" id="AQJ-gm-k4D"/>
@@ -921,11 +922,12 @@
                                     <constraint firstItem="8ac-gb-6AD" firstAttribute="top" secondItem="cOv-ZJ-urq" secondAttribute="bottom" constant="22" id="NN0-F0-jAy"/>
                                     <constraint firstItem="fR6-zc-TTB" firstAttribute="leading" secondItem="WWg-aV-pH9" secondAttribute="leading" id="OoO-Jv-4aC"/>
                                     <constraint firstAttribute="trailing" secondItem="fR6-zc-TTB" secondAttribute="trailing" id="Rkg-Um-H13"/>
+                                    <constraint firstItem="aGF-WI-qnh" firstAttribute="leading" secondItem="WWg-aV-pH9" secondAttribute="leading" constant="10" id="TBs-x4-U4h"/>
                                     <constraint firstItem="bvd-1t-Ec1" firstAttribute="top" secondItem="WWg-aV-pH9" secondAttribute="top" constant="272" id="Usx-bk-HCx"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="yhb-QQ-Vh6" secondAttribute="trailing" id="Z5t-Eh-cGs"/>
                                     <constraint firstItem="cOv-ZJ-urq" firstAttribute="leading" secondItem="fR6-zc-TTB" secondAttribute="leading" id="cTl-vC-bwK"/>
                                     <constraint firstItem="fR6-zc-TTB" firstAttribute="top" secondItem="yhb-QQ-Vh6" secondAttribute="bottom" id="eXH-ap-0oU"/>
-                                    <constraint firstItem="aGF-WI-qnh" firstAttribute="leading" secondItem="WWg-aV-pH9" secondAttribute="leadingMargin" constant="-16" id="erG-NL-lJI"/>
+                                    <constraint firstAttribute="bottom" secondItem="aGF-WI-qnh" secondAttribute="bottom" constant="10" id="ggO-pG-A1m"/>
                                     <constraint firstItem="bvd-1t-Ec1" firstAttribute="trailing" secondItem="8ac-gb-6AD" secondAttribute="trailing" id="ghP-VB-Ccm"/>
                                     <constraint firstItem="bvd-1t-Ec1" firstAttribute="trailing" secondItem="m2P-eh-A8d" secondAttribute="trailing" id="hHy-mm-Mfp"/>
                                     <constraint firstItem="aGF-WI-qnh" firstAttribute="top" secondItem="m2P-eh-A8d" secondAttribute="bottom" constant="8" symbolic="YES" id="iYJ-0q-lkk"/>
@@ -934,7 +936,6 @@
                                     <constraint firstItem="cOv-ZJ-urq" firstAttribute="trailing" secondItem="fR6-zc-TTB" secondAttribute="trailing" id="k3U-XN-Qqn"/>
                                     <constraint firstAttribute="trailing" secondItem="fR6-zc-TTB" secondAttribute="trailing" id="k9s-fV-fna"/>
                                     <constraint firstItem="yhb-QQ-Vh6" firstAttribute="leading" secondItem="WWg-aV-pH9" secondAttribute="leadingMargin" id="lsF-fO-2ug"/>
-                                    <constraint firstAttribute="bottom" secondItem="aGF-WI-qnh" secondAttribute="bottom" constant="-64" id="nbf-CQ-yhg"/>
                                     <constraint firstItem="aGF-WI-qnh" firstAttribute="centerX" secondItem="WWg-aV-pH9" secondAttribute="centerX" id="pq2-sL-cLE"/>
                                     <constraint firstItem="fR6-zc-TTB" firstAttribute="centerX" secondItem="WWg-aV-pH9" secondAttribute="centerX" id="r2D-5S-6k8"/>
                                     <constraint firstItem="m2P-eh-A8d" firstAttribute="top" secondItem="bvd-1t-Ec1" secondAttribute="bottom" constant="8" symbolic="YES" id="tPH-Uf-0tH"/>
@@ -964,6 +965,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Sc-UD-vJn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4865" y="-977"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="IvI-Ih-2t6">
+            <objects>
+                <viewController id="LM7-xw-GDS" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="42B-g1-HwJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="ua7-hH-pqR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cIh-S6-QHY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.6588235294117647" green="0.90196078431372551" blue="0.81176470588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LWV-va-cA6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5867" y="-1082"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="E3k-t8-T31">
@@ -1001,10 +1020,10 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nMx-tJ-fzI">
                                 <rect key="frame" x="10" y="298" width="394" height="407"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <mutableString key="text">Tahrir Lounge is one of the Goethe institute projects in Cairo, it aims at helping youth to discover their talents, and improving their creativity to contribute to the change for better future, through conducting various activities in different fields. In addition the project is supporting youth initiatives and dynamic student activities which is seeking to play positive and active role in the society.
+                                <string key="text">Tahrir Lounge is one of the Goethe institute projects in Cairo, it aims at helping youth to discover their talents, and improving their creativity to contribute to the change for better future, through conducting various activities in different fields. In addition the project is supporting youth initiatives and dynamic student activities which is seeking to play positive and active role in the society.
 
 The project enriches the culture scene in the Egyptian society, by organizing various workshops and activities to build the capacity of the governmental employees in different cultural fields. In addition, the project establishes partnerships with different governmental sector in a number of governorates, which reflects on creating rich culture environment for the Egyptian society.
-Tahrir Lounge is a neutral project and all its activities are supported by German foreign office. The project works under the umbrella of the cultural agreement between Egypt and Germany</mutableString>
+Tahrir Lounge is a neutral project and all its activities are supported by German foreign office. The project works under the umbrella of the cultural agreement between Egypt and Germany</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -1185,7 +1204,7 @@ Tahrir Lounge is a neutral project and all its activities are supported by Germa
                                         <rect key="frame" x="0.0" y="28" width="410" height="56"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yhC-eU-tgl" id="7Eh-ZI-gg0">
-                                            <rect key="frame" x="0.0" y="0.0" width="410" height="55.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="410" height="56"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3Hz-Ob-xzs">
@@ -1504,6 +1523,7 @@ Tahrir Lounge is a neutral project and all its activities are supported by Germa
         <image name="Contact Us" width="50" height="50"/>
         <image name="Events" width="50" height="50"/>
         <image name="Gallery" width="50" height="50"/>
+        <image name="Gallery-1" width="2560" height="1600"/>
         <image name="Globe Filled-50" width="50" height="50"/>
         <image name="Marker Filled-50" width="50" height="50"/>
         <image name="Message Filled-50" width="50" height="50"/>

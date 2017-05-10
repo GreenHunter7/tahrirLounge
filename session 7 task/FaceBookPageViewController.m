@@ -49,7 +49,7 @@
 -(void)webViewDidStartLoad:(UIWebView *)webView{
    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:_facebookWebView animated:YES];
     hud.label.text=@"Loading";
-    [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(timeout) userInfo:nil repeats:NO];
+    [NSTimer scheduledTimerWithTimeInterval:7 target:self selector:@selector(timeout) userInfo:nil repeats:NO];
 }
 //-------
 -(void)webViewDidFinishLoad:(UIWebView *)webView{

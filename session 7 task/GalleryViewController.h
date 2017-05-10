@@ -7,12 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GalleryCellCollectionViewCell.h"
 
 @interface GalleryViewController : UIViewController<UICollectionViewDelegate,UICollectionViewDataSource>{
     
     NSInteger OffsetImages;
 
     NSArray *ImageArray;
+    
+    NSInteger BackgroundCount;
+    
+    GalleryCellCollectionViewCell  *cell ;
+    
     
    
 }
@@ -27,7 +33,7 @@
 @property (strong, nonatomic) IBOutlet UIImageView *popupImageView;
 @property (strong, nonatomic) IBOutlet UIButton *CloseButton;
 
-@property (weak, nonatomic) IBOutlet UIImageView *BlurBackground;
+@property (strong, nonatomic) IBOutlet UIImageView *BlurBackground;
 
 
 -(void)onTimer;
