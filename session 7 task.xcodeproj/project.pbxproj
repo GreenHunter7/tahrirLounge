@@ -22,7 +22,7 @@
 		D0DACA671EBD0D8D003460DC /* navigationBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DACA661EBD0D8D003460DC /* navigationBarViewController.m */; };
 		D0DACA6A1EBD19C7003460DC /* GalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DACA691EBD19C7003460DC /* GalleryViewController.m */; };
 		FAC823FC1EC1F7D700490F7B /* Partners ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC823FB1EC1F7D700490F7B /* Partners ViewController.m */; };
-		FAC824001EC218C600490F7B /* LunchScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC823FF1EC218C600490F7B /* LunchScreenViewController.m */; };
+		FAFCC5011EC8D1AE00A39DA0 /* GallerySecondeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFCC5001EC8D1AE00A39DA0 /* GallerySecondeViewController.m */; };
 		FAFF19F51EB92A5A00D12ECE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFF19F41EB92A5A00D12ECE /* main.m */; };
 		FAFF19F81EB92A5A00D12ECE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFF19F71EB92A5A00D12ECE /* AppDelegate.m */; };
 		FAFF19FB1EB92A5A00D12ECE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFF19FA1EB92A5A00D12ECE /* ViewController.m */; };
@@ -84,8 +84,8 @@
 		D0DACA691EBD19C7003460DC /* GalleryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalleryViewController.m; sourceTree = "<group>"; };
 		FAC823FA1EC1F7D700490F7B /* Partners ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Partners ViewController.h"; sourceTree = "<group>"; };
 		FAC823FB1EC1F7D700490F7B /* Partners ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Partners ViewController.m"; sourceTree = "<group>"; };
-		FAC823FE1EC218C600490F7B /* LunchScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LunchScreenViewController.h; sourceTree = "<group>"; };
-		FAC823FF1EC218C600490F7B /* LunchScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LunchScreenViewController.m; sourceTree = "<group>"; };
+		FAFCC4FF1EC8D1AE00A39DA0 /* GallerySecondeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GallerySecondeViewController.h; sourceTree = "<group>"; };
+		FAFCC5001EC8D1AE00A39DA0 /* GallerySecondeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GallerySecondeViewController.m; sourceTree = "<group>"; };
 		FAFF19F01EB92A5A00D12ECE /* session 7 task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "session 7 task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAFF19F41EB92A5A00D12ECE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FAFF19F61EB92A5A00D12ECE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -231,6 +231,8 @@
 				D0DACA691EBD19C7003460DC /* GalleryViewController.m */,
 				1F569A9E1EBF851400B7111E /* GalleryCellCollectionViewCell.h */,
 				1F569A9F1EBF851400B7111E /* GalleryCellCollectionViewCell.m */,
+				FAFCC4FF1EC8D1AE00A39DA0 /* GallerySecondeViewController.h */,
+				FAFCC5001EC8D1AE00A39DA0 /* GallerySecondeViewController.m */,
 			);
 			name = Gallery;
 			sourceTree = "<group>";
@@ -272,8 +274,6 @@
 				FAFF19F71EB92A5A00D12ECE /* AppDelegate.m */,
 				FAFF19FC1EB92A5A00D12ECE /* Main.storyboard */,
 				FAFF19FF1EB92A5A00D12ECE /* Assets.xcassets */,
-				FAC823FE1EC218C600490F7B /* LunchScreenViewController.h */,
-				FAC823FF1EC218C600490F7B /* LunchScreenViewController.m */,
 				FAFF1A011EB92A5A00D12ECE /* LaunchScreen.storyboard */,
 				FAFF1A041EB92A5A00D12ECE /* Info.plist */,
 				FAFF19F31EB92A5A00D12ECE /* Supporting Files */,
@@ -464,7 +464,6 @@
 				FAFF19F81EB92A5A00D12ECE /* AppDelegate.m in Sources */,
 				D0DACA671EBD0D8D003460DC /* navigationBarViewController.m in Sources */,
 				1F2B91941EBFA9AF007CB259 /* teamMemberDetailView.m in Sources */,
-				FAC824001EC218C600490F7B /* LunchScreenViewController.m in Sources */,
 				1F2B91971EBFA9AF007CB259 /* UITeamMemberDetail.m in Sources */,
 				1F2B91951EBFA9AF007CB259 /* teamMembers.m in Sources */,
 				1F569AA01EBF851400B7111E /* GalleryCellCollectionViewCell.m in Sources */,
@@ -477,6 +476,7 @@
 				D0BAAC481EBA5AB700794928 /* MBProgressHUD.m in Sources */,
 				FAC823FC1EC1F7D700490F7B /* Partners ViewController.m in Sources */,
 				D0BAAC341EBA303B00794928 /* EventsViewController.m in Sources */,
+				FAFCC5011EC8D1AE00A39DA0 /* GallerySecondeViewController.m in Sources */,
 				FAFF1A281EB92A7C00D12ECE /* FirstViewController.m in Sources */,
 				FAFF1A2E1EB92F2300D12ECE /* SWRevealViewController.m in Sources */,
 			);

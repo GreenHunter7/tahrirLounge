@@ -80,13 +80,4 @@
 }
 */
 
-- (IBAction)GoToBrowser:(id)sender {
-    
-    if([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"https://www.facebook.com/TahrirLounge/"]]){
-    
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://www.facebook.com/TahrirLounge/"]];
-        
-    }
-    
-}
 @end

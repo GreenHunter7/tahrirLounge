@@ -178,6 +178,7 @@
                                         </constraints>
                                         <connections>
                                             <outlet property="viewContainer" destination="v1X-yc-iQv" id="tNo-fX-fLo"/>
+                                            <segue destination="fa0-zF-8eB" kind="show" id="REt-aK-4m3"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -256,6 +257,34 @@
             </objects>
             <point key="canvasLocation" x="4860.8695652173919" y="-3288.5869565217395"/>
         </scene>
+        <!--Gallery Seconde View Controller-->
+        <scene sceneID="jus-Zu-bJy">
+            <objects>
+                <viewController id="fa0-zF-8eB" customClass="GallerySecondeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9Gf-Qy-Y2Q"/>
+                        <viewControllerLayoutGuide type="bottom" id="jed-yb-Kxa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vXU-Hs-8mj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="gCm-wy-BOk">
+                        <barButtonItem key="leftBarButtonItem" title="back" id="rZf-ts-fou">
+                            <connections>
+                                <segue destination="qJ2-km-vO0" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="CCU-Qs-wLX"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="sideBarButton" destination="rZf-ts-fou" id="PSr-xG-8KI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S9H-uJ-hg7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5775" y="-3289"/>
+        </scene>
         <!--Seconde View Controller-->
         <scene sceneID="1Ns-xV-sLk">
             <objects>
@@ -269,7 +298,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="50" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bsk-hL-pmw">
-                                <rect key="frame" x="0.0" y="260.66666666666674" width="414" height="475.33333333333326"/>
+                                <rect key="frame" x="0.0" y="261" width="414" height="475"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Home" rowHeight="44" id="GCP-b3-dIS">
@@ -610,7 +639,7 @@
                                 <sections/>
                             </tableView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TL logo" translatesAutoresizingMaskIntoConstraints="NO" id="DNs-OJ-lj5">
-                                <rect key="frame" x="0.0" y="40" width="289.66666666666669" height="220.66666666666669"/>
+                                <rect key="frame" x="0.0" y="40" width="290" height="221"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.16078431372549021" green="0.30196078431372547" blue="0.59215686274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -673,6 +702,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cwT-DO-yU1" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <value key="contentSizeForViewInPopover" type="size" width="320" height="736"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="CRg-lp-b4Y">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -966,29 +996,12 @@
             </objects>
             <point key="canvasLocation" x="4865" y="-977"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="IvI-Ih-2t6">
-            <objects>
-                <viewController id="LM7-xw-GDS" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="42B-g1-HwJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="ua7-hH-pqR"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="cIh-S6-QHY">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.6588235294117647" green="0.90196078431372551" blue="0.81176470588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LWV-va-cA6" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5867" y="-1082"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="E3k-t8-T31">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="auU-vJ-gtc" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <value key="contentSizeForViewInPopover" type="size" width="320" height="736"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="XYH-5v-0sQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1060,6 +1073,7 @@ Tahrir Lounge is a neutral project and all its activities are supported by Germa
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JDw-XF-n1q" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <value key="contentSizeForViewInPopover" type="size" width="320" height="736"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="cfq-xQ-P1b">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1117,6 +1131,7 @@ Tahrir Lounge is a neutral project and all its activities are supported by Germa
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YVt-dF-8BM" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <value key="contentSizeForViewInPopover" type="size" width="320" height="736"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="DgU-3e-CNT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1135,6 +1150,7 @@ Tahrir Lounge is a neutral project and all its activities are supported by Germa
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5PQ-sD-sQ7" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <value key="contentSizeForViewInPopover" type="size" width="320" height="736"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="DaF-M3-i4z">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1153,6 +1169,7 @@ Tahrir Lounge is a neutral project and all its activities are supported by Germa
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vsp-mX-aeX" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <value key="contentSizeForViewInPopover" type="size" width="320" height="736"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="XQr-H8-PD0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1171,6 +1188,7 @@ Tahrir Lounge is a neutral project and all its activities are supported by Germa
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qJ2-km-vO0" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <value key="contentSizeForViewInPopover" type="size" width="320" height="736"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="fPn-27-b01">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1204,7 +1222,7 @@ Tahrir Lounge is a neutral project and all its activities are supported by Germa
                                         <rect key="frame" x="0.0" y="28" width="410" height="56"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yhC-eU-tgl" id="7Eh-ZI-gg0">
-                                            <rect key="frame" x="0.0" y="0.0" width="410" height="56"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="410" height="55.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3Hz-Ob-xzs">
@@ -1293,6 +1311,7 @@ Tahrir Lounge is a neutral project and all its activities are supported by Germa
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="f6E-qa-MpR" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <value key="contentSizeForViewInPopover" type="size" width="320" height="736"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="uZg-7c-M4o">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1393,11 +1412,10 @@ Tahrir Lounge is a neutral project and all its activities are supported by Germa
                         <outlet property="memberImage" destination="TyJ-yL-awk" id="AJx-ir-MdW"/>
                         <outlet property="memberNameLbl" destination="HYh-oF-lAS" id="2HL-kK-y9y"/>
                         <outlet property="memberTitleLbl" destination="LV2-sK-5AT" id="myo-OI-moV"/>
-                        <outlet property="sideBarButton" destination="Afj-7l-TSP" id="f0Q-jZ-MYx"/>
+                        <outlet property="sideBarButton" destination="VP4-nE-nZY" id="08f-Ro-ACV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p71-37-sol" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <barButtonItem image="menu" id="Afj-7l-TSP"/>
             </objects>
             <point key="canvasLocation" x="5842" y="1349"/>
         </scene>
@@ -1420,13 +1438,13 @@ Tahrir Lounge is a neutral project and all its activities are supported by Germa
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="goethe" translatesAutoresizingMaskIntoConstraints="NO" id="vF6-IB-yXK">
-                                        <rect key="frame" x="20.666666666666657" y="61" width="373" height="135"/>
+                                        <rect key="frame" x="21" y="61" width="373" height="135"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="vF6-IB-yXK" secondAttribute="height" multiplier="69:25" id="Xtl-F8-ZRx"/>
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empthy" translatesAutoresizingMaskIntoConstraints="NO" id="Dit-QT-6ga">
-                                        <rect key="frame" x="21" y="209.99999999999997" width="373" height="128.33333333333329"/>
+                                        <rect key="frame" x="21" y="210" width="373" height="128"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="128" id="dxn-yR-CJQ"/>
                                         </constraints>
@@ -1438,10 +1456,10 @@ Tahrir Lounge is a neutral project and all its activities are supported by Germa
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="anna" translatesAutoresizingMaskIntoConstraints="NO" id="Xkj-MS-bDc">
-                                        <rect key="frame" x="-0.66666666666665719" y="471.66666666666674" width="414.33333333333337" height="200.33333333333326"/>
+                                        <rect key="frame" x="-1" y="472" width="415" height="200"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Our Partners" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jvq-0C-ggE">
-                                        <rect key="frame" x="131.66666666666669" y="20" width="150.00000000000006" height="21"/>
+                                        <rect key="frame" x="132" y="20" width="150" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="9qs-lM-o0e"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="hNg-wO-sqB"/>
@@ -1502,7 +1520,7 @@ Tahrir Lounge is a neutral project and all its activities are supported by Germa
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5GP-MG-YX5" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dFd-Pq-aEj">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="dFd-Pq-aEj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1539,7 +1557,8 @@ Tahrir Lounge is a neutral project and all its activities are supported by Germa
         <image name="twitter" width="64" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ldw-Uu-Iqf"/>
         <segue reference="eXF-hC-eQH"/>
+        <segue reference="CCU-Qs-wLX"/>
+        <segue reference="ldw-Uu-Iqf"/>
     </inferredMetricsTieBreakers>
 </document>

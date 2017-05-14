@@ -21,11 +21,8 @@
     
     navigationBarViewController *navigationBar = [navigationBarViewController new];
     
-    
-    UIColor *navigationBarColorBlue = [UIColor colorWithRed:1.0/255 green:125.0/255 blue:214.0/255 alpha:1.0];
-    
-    [navigationBar customSetup:_sideBarButton :self];
-    [navigationBar childNavigationBarCustom:_sideBarButton :_OurTeamNavigationItem:_TeamDetailnavigationBar :navigationBarColorBlue :@"Our Team"];
+        
+    [navigationBar childNavigationBarCustom:_sideBarButton :_OurTeamNavigationItem:_TeamDetailnavigationBar :@"Our Team"];
     
     
     _memberNameLbl.text=_teamMemberOBJ.memberName;

@@ -15,7 +15,7 @@
 
 -(void) customizeNavigation : (UIBarButtonItem*)MenuButton :(UIViewController*)Selfoff :(UIColor*)navigationBarColor :(NSString *)TextForTitle;
 
--(void)childNavigationBarCustom: (UIBarButtonItem*)MenuButton : (UINavigationItem *) ourNavigatoinItem : (UINavigationBar *) navigationBar :(UIColor*)navigationBarColor :(NSString *)TextForTitle;
+-(void)childNavigationBarCustom: (UIBarButtonItem*)MenuButton : (UINavigationItem *) ourNavigatoinItem : (UINavigationBar *) navigationBar :(NSString *)TextForTitle;
 
 -(void) makeImageBlur :(UIImageView *)imageWantToBlur;
 

@@ -23,12 +23,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="9" translatesAutoresizingMaskIntoConstraints="NO" id="eDE-7E-Do5">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="eDE-7E-Do5" secondAttribute="height" multiplier="375:667" id="tk4-vB-Vud"/>
-                                </constraints>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="WeF-z1-ROo">
                                 <rect key="frame" x="112" y="258.5" width="150" height="150"/>
                                 <constraints>
@@ -42,18 +36,11 @@
                         <color key="backgroundColor" red="0.16078431372549021" green="0.30196078431372547" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="WeF-z1-ROo" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="96.5" id="4be-Vd-t5A"/>
-                            <constraint firstItem="eDE-7E-Do5" firstAttribute="height" secondItem="Ze5-6b-2t3" secondAttribute="height" id="DAb-Ar-ndy"/>
-                            <constraint firstItem="eDE-7E-Do5" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" id="EFk-e6-sU1"/>
-                            <constraint firstItem="eDE-7E-Do5" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="FdN-ab-p9G"/>
                             <constraint firstAttribute="trailingMargin" secondItem="WeF-z1-ROo" secondAttribute="trailing" constant="96.5" id="FzS-O2-ORB"/>
-                            <constraint firstItem="eDE-7E-Do5" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="V9J-sZ-F0Z"/>
                             <constraint firstItem="WeF-z1-ROo" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="238.5" id="XQ0-Ra-RHj"/>
                             <constraint firstItem="WeF-z1-ROo" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="96" id="eWl-Gl-HAK"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="blurImageLunchScreen" destination="eDE-7E-Do5" id="AOq-V9-ips"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -61,7 +48,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="9" width="5184" height="3456"/>
         <image name="Logo" width="720" height="540"/>
     </resources>
 </document>

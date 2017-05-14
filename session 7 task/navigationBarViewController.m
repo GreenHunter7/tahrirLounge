@@ -88,7 +88,7 @@
 
 
 
--(void)childNavigationBarCustom: (UIBarButtonItem*)MenuButton :(UINavigationItem *)item :(UINavigationBar *)navigationBar :(UIColor*)navigationBarColor :(NSString *) TextForTitle{
+-(void)childNavigationBarCustom: (UIBarButtonItem*)MenuButton :(UINavigationItem *)item :(UINavigationBar *)navigationBar :(NSString *) TextForTitle{
     
     
     navigationBar.barTintColor= [UIColor colorWithRed:41.0/255 green:77.0/255 blue:151.0/255 alpha:1];
