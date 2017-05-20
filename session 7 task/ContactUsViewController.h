@@ -9,8 +9,13 @@
 #import <UIKit/UIKit.h>
 #import <MessageUI/MessageUI.h>
 #import <MapKit/MapKit.h>
+#import <CoreLocation/CoreLocation.h>
 
-@interface ContactUsViewController : UIViewController <MFMailComposeViewControllerDelegate>
+@interface ContactUsViewController : UIViewController <MFMailComposeViewControllerDelegate,MKMapViewDelegate,CLLocationManagerDelegate>{
+
+    CLLocationManager *locationManager;
+    CLLocation *currentLocation;
+}
 
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *sideBarButton;
 
