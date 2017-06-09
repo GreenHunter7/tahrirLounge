@@ -7,7 +7,6 @@
 //
 
 #import "webService.h"
-#import "teamMembers.h"
 
 @implementation webService
 
@@ -21,7 +20,6 @@
     
      NSMutableArray *returnData=[NSMutableArray new];
     // 2
-   dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
     
     NSURLSessionDataTask *downloadTask = [[NSURLSession sharedSession]
                                           dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
@@ -31,23 +29,24 @@
                                               {
                                                   NSError *JSONError = nil;
                                                   
-                                                  NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data
+                                                  NSArray *dictionary =[NSJSONSerialization JSONObjectWithData:data
                                                                                                              options:0
-                                                                                                               error:&JSONError];
+                                                                                                                                                                   error:&JSONError];
                                                   if (JSONError)
                                                   {
-                                                      NSLog(@"Serialization error: %@", JSONError.localizedDescription);
+                                                      NSLog(@"Serialization error: %@",JSONError.localizedDescription);
                                                   }
                                                   else
                                                   {
                                                       NSLog(@"Response: %@", dictionary);
-                                                      NSArray * values = [dictionary allValues];
+                                                    
+//                                                      NSArray * values = [dictionary allValues];
                                                       
-                                                      for (NSArray *recipeArray in values)
+                                                      for (NSArray *recipeArray in dictionary)
                                                       {
-                                                              [returnData addObject:recipeArray];
+                                                          [returnData addObject:recipeArray];
                                                       }
-                                                      NSLog(@"Array: %@", values);
+                                                      NSLog(@"Array: %@", returnData);
                                                   }
                                               }
                                               else
@@ -55,14 +54,11 @@
                                                   NSLog(@"Error: %@", error.localizedDescription);
                                               }
                                               
-                                              dispatch_semaphore_signal(semaphore);
                                               
                                           }];
     
     // 3
     [downloadTask resume];
-    
-    dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
     
     return returnData;
 }

@@ -13,6 +13,6 @@
     NSMutableData * _responseData;
 }
 
--(NSArray*) returnDataFromAPI : (NSString*) apiURL;
+-(NSMutableArray*) returnDataFromAPI : (NSString*) apiURL;
 
 @end

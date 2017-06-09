@@ -6,14 +6,13 @@
 //  Copyright © 2017 GreenRoot. All rights reserved.
 //
 
-#import "ViewController.h"
 
 #import "ViewController.h"
 #import "UITeamMemberDetail.h"
 #import "teamMemberTableViewCell.h"
 
-#import "webService.h"
-#import "teamMembers.h"
+//#import "webService.h"
+//#import "teamMembers.h"
 
 #import "MBProgressHUD.h"
 #import "navigationBarViewController.h"
@@ -27,7 +26,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-   
+    NSString* apiURL=@"http://209.126.105.42:8001/iosapi/getAllTeamMembers";
+    [self returnDataFromAPI:apiURL];
+    
     
     navigationBarViewController *navigationBar = [navigationBarViewController new];
     
@@ -55,8 +56,7 @@
 
 -(void)viewDidAppear:(BOOL)animated{
 
-    NSString* apiURL=@"http://209.126.105.42:8001/iosapi/getAllTeamMembers";
-    [self returnDataFromAPI:apiURL];
+    
     
 }
 
@@ -104,7 +104,6 @@
                                                           [returnData addObject:recipeArray];
                                                       }
                                                       NSLog(@"Array: %@", values);
-                                                      
                                                       
                                                       
                                                       

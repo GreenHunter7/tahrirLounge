@@ -7,8 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EventsTableViewCell.h"
+@interface EventsViewController : UIViewController <UITableViewDataSource,UITableViewDelegate>{
+    
+    NSMutableArray *webServiceArray;
+    EventsTableViewCell *cell;
+}
 
-@interface EventsViewController : UIViewController
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *sideBarButton;
+@property (weak, nonatomic) IBOutlet UITableView *eventsTableView;
 
 @end

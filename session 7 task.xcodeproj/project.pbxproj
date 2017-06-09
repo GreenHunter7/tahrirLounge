@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1F2B91941EBFA9AF007CB259 /* teamMemberDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2B918D1EBFA9AF007CB259 /* teamMemberDetailView.m */; };
 		1F2B91951EBFA9AF007CB259 /* teamMembers.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2B918F1EBFA9AF007CB259 /* teamMembers.m */; };
 		1F2B91961EBFA9AF007CB259 /* teamMemberTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2B91911EBFA9AF007CB259 /* teamMemberTableViewCell.m */; };
 		1F2B91971EBFA9AF007CB259 /* UITeamMemberDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2B91931EBFA9AF007CB259 /* UITeamMemberDetail.m */; };
@@ -22,6 +21,7 @@
 		D0DACA671EBD0D8D003460DC /* navigationBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DACA661EBD0D8D003460DC /* navigationBarViewController.m */; };
 		D0DACA6A1EBD19C7003460DC /* GalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DACA691EBD19C7003460DC /* GalleryViewController.m */; };
 		FAC823FC1EC1F7D700490F7B /* Partners ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC823FB1EC1F7D700490F7B /* Partners ViewController.m */; };
+		FADDBA631EEA3ABB00AD954E /* EventsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FADDBA621EEA3ABB00AD954E /* EventsTableViewCell.m */; };
 		FAFCC5011EC8D1AE00A39DA0 /* GallerySecondeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFCC5001EC8D1AE00A39DA0 /* GallerySecondeViewController.m */; };
 		FAFF19F51EB92A5A00D12ECE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFF19F41EB92A5A00D12ECE /* main.m */; };
 		FAFF19F81EB92A5A00D12ECE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFF19F71EB92A5A00D12ECE /* AppDelegate.m */; };
@@ -54,8 +54,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1F2B918C1EBFA9AF007CB259 /* teamMemberDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = teamMemberDetailView.h; sourceTree = "<group>"; };
-		1F2B918D1EBFA9AF007CB259 /* teamMemberDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = teamMemberDetailView.m; sourceTree = "<group>"; };
 		1F2B918E1EBFA9AF007CB259 /* teamMembers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = teamMembers.h; sourceTree = "<group>"; };
 		1F2B918F1EBFA9AF007CB259 /* teamMembers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = teamMembers.m; sourceTree = "<group>"; };
 		1F2B91901EBFA9AF007CB259 /* teamMemberTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = teamMemberTableViewCell.h; sourceTree = "<group>"; };
@@ -84,6 +82,8 @@
 		D0DACA691EBD19C7003460DC /* GalleryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalleryViewController.m; sourceTree = "<group>"; };
 		FAC823FA1EC1F7D700490F7B /* Partners ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Partners ViewController.h"; sourceTree = "<group>"; };
 		FAC823FB1EC1F7D700490F7B /* Partners ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Partners ViewController.m"; sourceTree = "<group>"; };
+		FADDBA611EEA3ABB00AD954E /* EventsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsTableViewCell.h; sourceTree = "<group>"; };
+		FADDBA621EEA3ABB00AD954E /* EventsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsTableViewCell.m; sourceTree = "<group>"; };
 		FAFCC4FF1EC8D1AE00A39DA0 /* GallerySecondeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GallerySecondeViewController.h; sourceTree = "<group>"; };
 		FAFCC5001EC8D1AE00A39DA0 /* GallerySecondeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GallerySecondeViewController.m; sourceTree = "<group>"; };
 		FAFF19F01EB92A5A00D12ECE /* session 7 task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "session 7 task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -138,8 +138,6 @@
 		1F2B918B1EBFA7AF007CB259 /* UITEam */ = {
 			isa = PBXGroup;
 			children = (
-				1F2B918C1EBFA9AF007CB259 /* teamMemberDetailView.h */,
-				1F2B918D1EBFA9AF007CB259 /* teamMemberDetailView.m */,
 				1F2B918E1EBFA9AF007CB259 /* teamMembers.h */,
 				1F2B918F1EBFA9AF007CB259 /* teamMembers.m */,
 				1F2B91901EBFA9AF007CB259 /* teamMemberTableViewCell.h */,
@@ -152,13 +150,13 @@
 			name = UITEam;
 			sourceTree = "<group>";
 		};
-		1F569AA11EBFA65000B7111E /* OurTeam */ = {
+		1F569AA11EBFA65000B7111E /* webService */ = {
 			isa = PBXGroup;
 			children = (
 				1F569AA21EBFA67000B7111E /* webService.h */,
 				1F569AA31EBFA67000B7111E /* webService.m */,
 			);
-			name = OurTeam;
+			name = webService;
 			sourceTree = "<group>";
 		};
 		D0BAAC411EBA30F200794928 /* events */ = {
@@ -166,6 +164,9 @@
 			children = (
 				D0BAAC321EBA303B00794928 /* EventsViewController.h */,
 				D0BAAC331EBA303B00794928 /* EventsViewController.m */,
+				FADDBA611EEA3ABB00AD954E /* EventsTableViewCell.h */,
+				FADDBA621EEA3ABB00AD954E /* EventsTableViewCell.m */,
+				1F569AA11EBFA65000B7111E /* webService */,
 			);
 			name = events;
 			sourceTree = "<group>";
@@ -284,7 +285,6 @@
 				FAFF1A2C1EB92F2300D12ECE /* SWRevealViewController.h */,
 				FAFF1A2D1EB92F2300D12ECE /* SWRevealViewController.m */,
 				D0BAAC491EBA5AC400794928 /* MPLoader */,
-				1F569AA11EBFA65000B7111E /* OurTeam */,
 				D0BAAC411EBA30F200794928 /* events */,
 				D0BAAC421EBA310400794928 /* contactUs */,
 				D0BAAC431EBA311300794928 /* AboutUs */,
@@ -457,13 +457,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FADDBA631EEA3ABB00AD954E /* EventsTableViewCell.m in Sources */,
 				D0BAAC3A1EBA308600794928 /* AboutUsViewController.m in Sources */,
 				1F2B91961EBFA9AF007CB259 /* teamMemberTableViewCell.m in Sources */,
 				FAFF1A2B1EB92A9C00D12ECE /* SecondeViewController.m in Sources */,
 				FAFF19FB1EB92A5A00D12ECE /* ViewController.m in Sources */,
 				FAFF19F81EB92A5A00D12ECE /* AppDelegate.m in Sources */,
 				D0DACA671EBD0D8D003460DC /* navigationBarViewController.m in Sources */,
-				1F2B91941EBFA9AF007CB259 /* teamMemberDetailView.m in Sources */,
 				1F2B91971EBFA9AF007CB259 /* UITeamMemberDetail.m in Sources */,
 				1F2B91951EBFA9AF007CB259 /* teamMembers.m in Sources */,
 				1F569AA01EBF851400B7111E /* GalleryCellCollectionViewCell.m in Sources */,
