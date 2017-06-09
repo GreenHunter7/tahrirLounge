@@ -9,7 +9,6 @@
 #import "EventsViewController.h"
 #import "SWRevealViewController.h"
 #import "navigationBarViewController.h"
-#import "webService.h"
 
 @interface EventsViewController ()
 
@@ -33,7 +32,10 @@
     [navigationBar customSetup:_sideBarButton :self];
     [navigationBar customizeNavigation:_sideBarButton :self :navigationBarColorBlue :@"Events"];
    //-----------
-    [self returnDataFromAPI];
+    
+    webServiceArray = [[NSArray alloc]initWithArray:[self getDataFromApi]];
+    
+    NSLog(@"webservice count: %lu",[webServiceArray count]);
     
 }
 
@@ -44,67 +46,82 @@
 }
 
 //-------------------------
--(NSMutableArray*) returnDataFromAPI
-{
-    // 1
+-(NSMutableArray*)getDataFromApi{
+
+    NSURL *apiUrl =[NSURL URLWithString:@"http://tahrirlounge.net/event/api/events"];
     
-    NSURL *url = [NSURL URLWithString:@"http://tahrirlounge.net/event/api/events"];
+    NSMutableArray *returnedData = [NSMutableArray new];
     
-    webServiceArray =[NSMutableArray new];
-    // 2
+    dispatch_semaphore_t semaphore=dispatch_semaphore_create(0);
     
-    NSURLSessionDataTask *downloadTask = [[NSURLSession sharedSession]
-                                          dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-                                              // 4: Handle response here
-                                              
-                                              if (!error)
-                                              {
-                                                  NSError *JSONError = nil;
-                                                  
-                                                  NSArray *dictionary =[NSJSONSerialization JSONObjectWithData:data
-                                                                                                       options:0
-                                                                                                         error:&JSONError];
-                                                  if (JSONError)
-                                                  {
-                                                      NSLog(@"Serialization error: %@",JSONError.localizedDescription);
-                                                  }
-                                                  else
-                                                  {
-                                                      NSLog(@"Response: %@", dictionary);
-                                                      
-                                                      //                                                      NSArray * values = [dictionary allValues];
-                                                      
-                                                      for (NSArray *recipeArray in dictionary)
-                                                      {
-                                                          [webServiceArray addObject:recipeArray];
-                                                      }
-                                                      NSLog(@"Array: %@", webServiceArray);
-                                                  }
-                                              }
-                                              else
-                                              {
-                                                  NSLog(@"Error: %@", error.localizedDescription);
-                                              }
-                                              
-                                              
-                                          }];
+    NSURLSessionDataTask *getData=[[NSURLSession sharedSession] dataTaskWithURL:apiUrl completionHandler:^(NSData *data,NSURLResponse *response,NSError *error){
+        
+        if(!error){
+        
+            NSArray *arrayOfData=[NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
+            
+            if (error) {
+                NSLog(@"Error: %@",error.localizedDescription);
+            }else{
+                for(NSDictionary *dictionary in arrayOfData){
+                    [returnedData addObject: dictionary];
+                }
+                
+                
+                
+                NSLog(@"returneddata: %@",returnedData);
+            }
+        }else{
+            NSLog(@"Error: %@",error.localizedDescription);
+        }
     
-    // 3
-    [downloadTask resume];
-    return webServiceArray;
+        dispatch_semaphore_signal(semaphore);
+        
+    }];
+    
+    [getData resume];
+    
+    dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+    
+    return returnedData;
 }
+
+-(NSMutableArray*)getCellItems: (NSIndexPath *)index{
+
+    
+    arrayOfCellObjects=[NSMutableArray new];
+    
+    //array=[eventImage,]
+    NSDictionary *dictionary =[[NSDictionary alloc]initWithDictionary:[webServiceArray objectAtIndex:index.item]];
+    
+    
+    NSURL *eventImageUrl =[NSURL URLWithString:[dictionary objectForKey:@"eventImage"]];
+    NSData *imageData =[NSData dataWithContentsOfURL:eventImageUrl];
+    UIImage *eventImageImage=[UIImage imageWithData:imageData];
+    
+    [arrayOfCellObjects setObject:eventImageImage atIndexedSubscript:0];
+    
+    return arrayOfCellObjects;
+    
+}
+
 //---------------
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    cell = [tableView dequeueReusableCellWithIdentifier:@"EventsTableViewCell"];
     
+    
+    cell = [tableView dequeueReusableCellWithIdentifier:@"EventsTableViewCell" forIndexPath:indexPath];
+    
+    [cell.eventImage setImage:[[self getCellItems:indexPath] objectAtIndex:0]];
     
     return cell;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    NSLog(@"websrviceArray: %@",webServiceArray);
-    return [webServiceArray count];
+    
+    
+    
+  return [webServiceArray count];
 }
 
 /*

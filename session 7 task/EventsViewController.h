@@ -10,7 +10,11 @@
 #import "EventsTableViewCell.h"
 @interface EventsViewController : UIViewController <UITableViewDataSource,UITableViewDelegate>{
     
-    NSMutableArray *webServiceArray;
+    NSDictionary *webServiceDictionary;
+    NSArray *webServiceArray;
+    
+    NSMutableArray *arrayOfCellObjects;
+    
     EventsTableViewCell *cell;
 }
 
