@@ -8,15 +8,19 @@
 
 #import <UIKit/UIKit.h>
 #import "EventsTableViewCell.h"
+#import "DataForCells.h"
 @interface EventsViewController : UIViewController <UITableViewDataSource,UITableViewDelegate>{
     
     NSDictionary *webServiceDictionary;
-    NSArray *webServiceArray;
     
     NSMutableArray *arrayOfCellObjects;
     
     EventsTableViewCell *cell;
+    
+    DataForCells *webServiceData;
+    
 }
+
 
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *sideBarButton;
 @property (weak, nonatomic) IBOutlet UITableView *eventsTableView;

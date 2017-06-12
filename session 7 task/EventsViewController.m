@@ -9,6 +9,7 @@
 #import "EventsViewController.h"
 #import "SWRevealViewController.h"
 #import "navigationBarViewController.h"
+#import "DataForCells.h"
 
 @interface EventsViewController ()
 
@@ -33,9 +34,15 @@
     [navigationBar customizeNavigation:_sideBarButton :self :navigationBarColorBlue :@"Events"];
    //-----------
     
-    webServiceArray = [[NSArray alloc]initWithArray:[self getDataFromApi]];
     
-    NSLog(@"webservice count: %lu",[webServiceArray count]);
+//        webServiceArray = [[NSArray alloc]initWithArray:[webServiceData getDataFromApi]];
+//        webServiceArray = [[[webServiceArray reverseObjectEnumerator] allObjects] mutableCopy];
+    
+    
+    webServiceData.webServiceArray = [[NSArray alloc]initWithArray:[webServiceData getDataFromApi]];
+    webServiceData.webServiceArray = [[[webServiceData.webServiceArray reverseObjectEnumerator] allObjects] mutableCopy];
+    
+    NSLog(@"webservice count: %lu",[webServiceData.webServiceArray count]);
     
 }
 
@@ -45,65 +52,45 @@
     // Dispose of any resources that can be recreated.
 }
 
-//-------------------------
--(NSMutableArray*)getDataFromApi{
 
-    NSURL *apiUrl =[NSURL URLWithString:@"http://tahrirlounge.net/event/api/events"];
-    
-    NSMutableArray *returnedData = [NSMutableArray new];
-    
-    dispatch_semaphore_t semaphore=dispatch_semaphore_create(0);
-    
-    NSURLSessionDataTask *getData=[[NSURLSession sharedSession] dataTaskWithURL:apiUrl completionHandler:^(NSData *data,NSURLResponse *response,NSError *error){
-        
-        if(!error){
-        
-            NSArray *arrayOfData=[NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
-            
-            if (error) {
-                NSLog(@"Error: %@",error.localizedDescription);
-            }else{
-                for(NSDictionary *dictionary in arrayOfData){
-                    [returnedData addObject: dictionary];
-                }
-                
-                
-                
-                NSLog(@"returneddata: %@",returnedData);
-            }
-        }else{
-            NSLog(@"Error: %@",error.localizedDescription);
-        }
-    
-        dispatch_semaphore_signal(semaphore);
-        
-    }];
-    
-    [getData resume];
-    
-    dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
-    
-    return returnedData;
-}
+//--------------------------
 
--(NSMutableArray*)getCellItems: (NSIndexPath *)index{
-
-    
-    arrayOfCellObjects=[NSMutableArray new];
-    
-    //array=[eventImage,]
-    NSDictionary *dictionary =[[NSDictionary alloc]initWithDictionary:[webServiceArray objectAtIndex:index.item]];
-    
-    
-    NSURL *eventImageUrl =[NSURL URLWithString:[dictionary objectForKey:@"eventImage"]];
-    NSData *imageData =[NSData dataWithContentsOfURL:eventImageUrl];
-    UIImage *eventImageImage=[UIImage imageWithData:imageData];
-    
-    [arrayOfCellObjects setObject:eventImageImage atIndexedSubscript:0];
-    
-    return arrayOfCellObjects;
-    
-}
+//-(NSMutableArray*)getCellItems: (NSIndexPath *)index{
+//
+//    
+//    arrayOfCellObjects=[NSMutableArray new];
+//    
+//    //array=[eventImage,]
+//    NSDictionary *dictionary =[[NSDictionary alloc]initWithDictionary:[webServiceArray objectAtIndex:index.item]];
+//    
+//    
+//    NSURL *eventImageUrl =[NSURL URLWithString:[dictionary objectForKey:@"eventImage"]];
+//    NSData *imageData =[NSData dataWithContentsOfURL:eventImageUrl];
+//    UIImage *eventImageImage=[UIImage imageWithData:imageData];
+//    [arrayOfCellObjects setObject:eventImageImage atIndexedSubscript:0];
+//    
+//    NSString *eventName = [dictionary objectForKey:@"eventName"];
+//    [arrayOfCellObjects setObject:eventName atIndexedSubscript:1];
+//    
+//    NSString *eventInstractor = [dictionary objectForKey:@"eventInstractor"];
+//    [arrayOfCellObjects setObject:eventInstractor atIndexedSubscript:2];
+//    
+//    NSString *eventDetials = [dictionary objectForKey:@"eventDetails"];
+//    [arrayOfCellObjects setObject:eventDetials atIndexedSubscript:3];
+//    
+//    NSString *eventDate = [dictionary objectForKey:@"eventDate"];
+//    [arrayOfCellObjects setObject:eventDate atIndexedSubscript:4];
+//    
+//    
+////    NSURL *instractorImageUrl =[NSURL URLWithString:[dictionary objectForKey:@"instractorImage"]];
+////    NSData *instractorImageData =[NSData dataWithContentsOfURL:instractorImageUrl];
+////    UIImage *instractorImage=[UIImage imageWithData:instractorImageData];
+////    [arrayOfCellObjects setObject:instractorImage atIndexedSubscript:5];
+//    
+//    return arrayOfCellObjects;
+//    
+//
+//}
 
 //---------------
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -112,7 +99,20 @@
     
     cell = [tableView dequeueReusableCellWithIdentifier:@"EventsTableViewCell" forIndexPath:indexPath];
     
-    [cell.eventImage setImage:[[self getCellItems:indexPath] objectAtIndex:0]];
+    [cell.eventImage setImage:[[webServiceData getCellItems:indexPath] objectAtIndex:0]];
+    [cell.eventName setText:[[webServiceData getCellItems:indexPath] objectAtIndex:1]];
+    [cell.eventInstractor setText:[[webServiceData getCellItems:indexPath] objectAtIndex:2]];
+    [cell.details setText:[[webServiceData getCellItems:indexPath] objectAtIndex:3]];
+    [cell.startDate setText:[[webServiceData getCellItems:indexPath] objectAtIndex:4]];
+    
+    //[cell.instractorImage setImage:[[self getCellItems:indexPath] objectAtIndex:5]];
+    
+    cell.eventName.layer.shadowOpacity = 0.6f;
+    cell.eventInstractor.layer.shadowOpacity = 0.6f;
+    cell.startDate.layer.shadowOpacity = 0.6f;
+    cell.details.layer.shadowOpacity = 0.6f;
+    cell.background.layer.cornerRadius = 20;
+    cell.seeMore.layer.cornerRadius = 10;
     
     return cell;
 }
@@ -121,7 +121,7 @@
     
     
     
-  return [webServiceArray count];
+  return [webServiceData.webServiceArray count];
 }
 
 /*

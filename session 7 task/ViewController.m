@@ -75,7 +75,6 @@
     
     NSMutableArray *returnData=[NSMutableArray new];
     // 2
-    dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
   // [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     NSURLSessionDataTask *downloadTask = [[NSURLSession sharedSession]
                                           dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
@@ -121,14 +120,12 @@
                                                   NSLog(@"Error: %@", error.localizedDescription);
                                               }
                                               
-                                              dispatch_semaphore_signal(semaphore);
                                               
                                           }];
     
     // 3
     [downloadTask resume];
     
-    dispatch_semaphore_wait(semaphore, DISPATCH_TIMER_STRICT);
    
 }
 

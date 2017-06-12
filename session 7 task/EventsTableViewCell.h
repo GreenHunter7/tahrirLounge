@@ -15,5 +15,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *eventInstractor;
 @property (weak, nonatomic) IBOutlet UILabel *startDate;
 @property (weak, nonatomic) IBOutlet UIImageView *eventImage;
+@property (weak, nonatomic) IBOutlet UIView *background;
+@property (weak, nonatomic) IBOutlet UIButton *seeMore;
+- (IBAction)seeMoreAction:(id)sender;
 
 @end

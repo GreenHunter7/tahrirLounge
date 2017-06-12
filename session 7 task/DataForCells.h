@@ -10,4 +10,12 @@
 
 @interface DataForCells : UIViewController
 
+@property (retain, atomic)NSArray *webServiceArray;
+
+@property (retain)NSMutableArray *DataArray;
+
+-(NSMutableArray*)getCellItems: (NSIndexPath *)index;
+
+-(NSMutableArray*)getDataFromApi;
+
 @end
