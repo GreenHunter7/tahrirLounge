@@ -9,7 +9,7 @@
 #import "EventsViewController.h"
 #import "SWRevealViewController.h"
 #import "navigationBarViewController.h"
-#import "DataForCells.h"
+#import "MBProgressHUD.h"
 
 @interface EventsViewController ()
 
@@ -33,17 +33,27 @@
     [navigationBar customSetup:_sideBarButton :self];
     [navigationBar customizeNavigation:_sideBarButton :self :navigationBarColorBlue :@"Events"];
    //-----------
+    webServiceData = [DataForCells new];
+    [webServiceData getDataFromApi];
     
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:_eventsTableView animated:YES];
+    [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(timeout) userInfo:nil repeats:YES];
+    hud.label.text=@"Loading";
     
-//        webServiceArray = [[NSArray alloc]initWithArray:[webServiceData getDataFromApi]];
-//        webServiceArray = [[[webServiceArray reverseObjectEnumerator] allObjects] mutableCopy];
+    double delaySec = 1.8;
+    dispatch_time_t time = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delaySec *NSEC_PER_SEC));
     
-    
-    webServiceData.webServiceArray = [[NSArray alloc]initWithArray:[webServiceData getDataFromApi]];
-    webServiceData.webServiceArray = [[[webServiceData.webServiceArray reverseObjectEnumerator] allObjects] mutableCopy];
-    
-    NSLog(@"webservice count: %lu",[webServiceData.webServiceArray count]);
-    
+    dispatch_after(time, dispatch_get_main_queue(), ^{
+        webServiceArray = [NSArray arrayWithArray:[webServiceData DataArray]];
+        webServiceArray = [[[webServiceArray reverseObjectEnumerator] allObjects] mutableCopy];
+        [_eventsTableView reloadData];
+        
+        [MBProgressHUD hideHUDForView:_eventsTableView animated:YES];
+        
+        NSLog(@"webservice count: %lu",[webServiceArray count]);
+    });
+ 
+    //add NSUserDefaults for faster response
 }
 
 
@@ -53,44 +63,8 @@
 }
 
 
-//--------------------------
 
-//-(NSMutableArray*)getCellItems: (NSIndexPath *)index{
-//
-//    
-//    arrayOfCellObjects=[NSMutableArray new];
-//    
-//    //array=[eventImage,]
-//    NSDictionary *dictionary =[[NSDictionary alloc]initWithDictionary:[webServiceArray objectAtIndex:index.item]];
-//    
-//    
-//    NSURL *eventImageUrl =[NSURL URLWithString:[dictionary objectForKey:@"eventImage"]];
-//    NSData *imageData =[NSData dataWithContentsOfURL:eventImageUrl];
-//    UIImage *eventImageImage=[UIImage imageWithData:imageData];
-//    [arrayOfCellObjects setObject:eventImageImage atIndexedSubscript:0];
-//    
-//    NSString *eventName = [dictionary objectForKey:@"eventName"];
-//    [arrayOfCellObjects setObject:eventName atIndexedSubscript:1];
-//    
-//    NSString *eventInstractor = [dictionary objectForKey:@"eventInstractor"];
-//    [arrayOfCellObjects setObject:eventInstractor atIndexedSubscript:2];
-//    
-//    NSString *eventDetials = [dictionary objectForKey:@"eventDetails"];
-//    [arrayOfCellObjects setObject:eventDetials atIndexedSubscript:3];
-//    
-//    NSString *eventDate = [dictionary objectForKey:@"eventDate"];
-//    [arrayOfCellObjects setObject:eventDate atIndexedSubscript:4];
-//    
-//    
-////    NSURL *instractorImageUrl =[NSURL URLWithString:[dictionary objectForKey:@"instractorImage"]];
-////    NSData *instractorImageData =[NSData dataWithContentsOfURL:instractorImageUrl];
-////    UIImage *instractorImage=[UIImage imageWithData:instractorImageData];
-////    [arrayOfCellObjects setObject:instractorImage atIndexedSubscript:5];
-//    
-//    return arrayOfCellObjects;
-//    
-//
-//}
+//--------------------------
 
 //---------------
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -99,11 +73,11 @@
     
     cell = [tableView dequeueReusableCellWithIdentifier:@"EventsTableViewCell" forIndexPath:indexPath];
     
-    [cell.eventImage setImage:[[webServiceData getCellItems:indexPath] objectAtIndex:0]];
-    [cell.eventName setText:[[webServiceData getCellItems:indexPath] objectAtIndex:1]];
-    [cell.eventInstractor setText:[[webServiceData getCellItems:indexPath] objectAtIndex:2]];
-    [cell.details setText:[[webServiceData getCellItems:indexPath] objectAtIndex:3]];
-    [cell.startDate setText:[[webServiceData getCellItems:indexPath] objectAtIndex:4]];
+    [cell.eventImage setImage:[[webServiceData getCellItems:indexPath:webServiceArray] objectAtIndex:0]];
+    [cell.eventName setText:[[webServiceData getCellItems:indexPath:webServiceArray] objectAtIndex:1]];
+    [cell.eventInstractor setText:[[webServiceData getCellItems:indexPath:webServiceArray] objectAtIndex:2]];
+    [cell.details setText:[[webServiceData getCellItems:indexPath:webServiceArray] objectAtIndex:3]];
+    [cell.startDate setText:[[webServiceData getCellItems:indexPath:webServiceArray] objectAtIndex:4]];
     
     //[cell.instractorImage setImage:[[self getCellItems:indexPath] objectAtIndex:5]];
     
@@ -121,8 +95,13 @@
     
     
     
-  return [webServiceData.webServiceArray count];
+  return [webServiceArray count];
 }
+
+-(void)timeout{
+    [MBProgressHUD hideHUDForView:_eventsTableView animated:YES];
+}
+
 
 /*
 #pragma mark - Navigation

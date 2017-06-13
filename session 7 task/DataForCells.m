@@ -21,6 +21,7 @@
     
     
 
+
     
 }
 
@@ -34,13 +35,20 @@
     
     NSURL *apiUrl =[NSURL URLWithString:@"http://tahrirlounge.net/event/api/events"];
     
+    _DataArray = [NSMutableArray new];
     
-    dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
+    //dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
     
-
-    NSURLSessionDataTask *getData=[[NSURLSession sharedSession] dataTaskWithURL:apiUrl completionHandler:^(NSData *data,NSURLResponse *response,NSError *error){
-        
-        if(!error){
+    
+    
+    NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
+    
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:config];
+    
+    
+     NSURLSessionDataTask *getData=[session dataTaskWithURL:apiUrl completionHandler:^(NSData *data,NSURLResponse *response,NSError *error){
+             
+            if(!error){
             
             NSArray *arrayOfData=[NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
             
@@ -50,12 +58,15 @@
                 
             }else{
                 
-                for(NSDictionary *dictionary in arrayOfData){
-                    
-                    [_DataArray addObject: dictionary];
-                    
-                }
                 
+                    for(NSDictionary *dictionary in arrayOfData){
+                    
+                        [_DataArray addObject: dictionary];
+                    
+                    }
+                
+                
+                    
                 NSLog(@"returneddata: %@",_DataArray);
                 
                 
@@ -65,28 +76,31 @@
             
             NSLog(@"Error: %@",error.localizedDescription);
             
-        }
-        
-        
-        dispatch_semaphore_signal(semaphore);
-        
+        }             
+         
+             
+            //dispatch_semaphore_signal(semaphore);
     }];
+    
+    
     
     [getData resume];
     
-    dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+    //dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
     
     
     return _DataArray;
 }
+
 //--------------
--(NSMutableArray*)getCellItems: (NSIndexPath *)index{
+
+-(NSMutableArray*)getCellItems: (NSIndexPath *)index :(NSArray *)array{
     
     
     NSMutableArray *arrayOfCellObjects=[NSMutableArray new];
     
     //array=[eventImage,]
-    NSDictionary *dictionary =[[NSDictionary alloc]initWithDictionary:[_DataArray objectAtIndex:index.item]];
+    NSDictionary *dictionary =[[NSDictionary alloc]initWithDictionary:[array objectAtIndex:index.item]];
     
     
     NSURL *eventImageUrl =[NSURL URLWithString:[dictionary objectForKey:@"eventImage"]];
