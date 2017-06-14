@@ -10,12 +10,13 @@
 #import "SWRevealViewController.h"
 #import "navigationBarViewController.h"
 #import "MBProgressHUD.h"
+#import "AppDelegate.h"
 
 @interface EventsViewController ()
 
 @end
 
-@implementation EventsViewController
+@implementation EventsViewController 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -34,27 +35,21 @@
     [navigationBar customizeNavigation:_sideBarButton :self :navigationBarColorBlue :@"Events"];
    //-----------
     webServiceData = [DataForCells new];
-    [webServiceData getDataFromApi];
+    
+    delegateApp=(AppDelegate*)[[UIApplication sharedApplication] delegate];
     
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:_eventsTableView animated:YES];
     [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(timeout) userInfo:nil repeats:YES];
     hud.label.text=@"Loading";
     
-    double delaySec = 1.8;
-    dispatch_time_t time = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delaySec *NSEC_PER_SEC));
+    NSLog(@"dataArrray : %lu",[[delegateApp.webServiceData DataArray] count]);
+
+    UDSavedData=[NSUserDefaults new];
     
-    dispatch_after(time, dispatch_get_main_queue(), ^{
-        webServiceArray = [NSArray arrayWithArray:[webServiceData DataArray]];
-        webServiceArray = [[[webServiceArray reverseObjectEnumerator] allObjects] mutableCopy];
-        [_eventsTableView reloadData];
-        
-        [MBProgressHUD hideHUDForView:_eventsTableView animated:YES];
-        
-        NSLog(@"webservice count: %lu",[webServiceArray count]);
-    });
- 
-    //add NSUserDefaults for faster response
+    
+        //add NSUserDefaults for faster response
 }
+
 
 
 - (void)didReceiveMemoryWarning {
@@ -62,6 +57,29 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)viewDidAppear:(BOOL)animated{
+    
+    
+    double delaySec = 0.5;
+    dispatch_time_t time = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delaySec *NSEC_PER_SEC));
+    
+    dispatch_after(time, dispatch_get_main_queue(), ^{
+        
+        webServiceArray = [NSArray arrayWithArray:[delegateApp.webServiceData DataArray]];
+        webServiceArray = [[[webServiceArray reverseObjectEnumerator] allObjects] mutableCopy];
+        [MBProgressHUD hideHUDForView:_eventsTableView animated:YES];
+        
+        NSLog(@"webservice count: %lu",[webServiceArray count]);
+        
+        
+        if([webServiceArray count] != 0 ){
+            [_eventsTableView reloadData];
+        }else{
+            NSLog(@"Error webServiceArray Empty");
+        }
+    });
+
+}
 
 
 //--------------------------
@@ -72,6 +90,7 @@
     
     
     cell = [tableView dequeueReusableCellWithIdentifier:@"EventsTableViewCell" forIndexPath:indexPath];
+    
     
     [cell.eventImage setImage:[[webServiceData getCellItems:indexPath:webServiceArray] objectAtIndex:0]];
     [cell.eventName setText:[[webServiceData getCellItems:indexPath:webServiceArray] objectAtIndex:1]];
@@ -87,6 +106,9 @@
     cell.details.layer.shadowOpacity = 0.6f;
     cell.background.layer.cornerRadius = 20;
     cell.seeMore.layer.cornerRadius = 10;
+    
+    
+    
     
     return cell;
 }

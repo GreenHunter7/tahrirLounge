@@ -36,6 +36,7 @@
     NSURL *apiUrl =[NSURL URLWithString:@"http://tahrirlounge.net/event/api/events"];
     
     _DataArray = [NSMutableArray new];
+    _ServiceArray = [NSArray new];
     
     //dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
     
@@ -65,7 +66,7 @@
                     
                     }
                 
-                
+                _ServiceArray = [NSArray arrayWithArray:_DataArray];
                     
                 NSLog(@"returneddata: %@",_DataArray);
                 
@@ -78,7 +79,6 @@
             
         }             
          
-             
             //dispatch_semaphore_signal(semaphore);
     }];
     
@@ -97,7 +97,8 @@
 -(NSMutableArray*)getCellItems: (NSIndexPath *)index :(NSArray *)array{
     
     
-    NSMutableArray *arrayOfCellObjects=[NSMutableArray new];
+    arrayOfCellObjects=[NSMutableArray new];
+    NSMutableDictionary *diction = [NSMutableDictionary new];
     
     //array=[eventImage,]
     NSDictionary *dictionary =[[NSDictionary alloc]initWithDictionary:[array objectAtIndex:index.item]];
@@ -121,25 +122,27 @@
     [arrayOfCellObjects setObject:eventDate atIndexedSubscript:4];
     
     
-    //    NSURL *instractorImageUrl =[NSURL URLWithString:[dictionary objectForKey:@"instractorImage"]];
-    //    NSData *instractorImageData =[NSData dataWithContentsOfURL:instractorImageUrl];
-    //    UIImage *instractorImage=[UIImage imageWithData:instractorImageData];
-    //    [arrayOfCellObjects setObject:instractorImage atIndexedSubscript:5];
+    
+    
     
     return arrayOfCellObjects;
     
 }
+//------------------------------------------
+-(UIImage*) storingImages {
+    
+    NSData *data =UIImageJPEGRepresentation([arrayOfCellObjects objectAtIndex:0], 1);
 
-//-(void)getCellItems: (NSIndexPath *)index{
-//    
-//    NSDictionary *dictionary =[[NSDictionary alloc]initWithDictionary:[webServiceArray objectAtIndex:index.item]];
-//    
-//    
-//    NSURL *eventImageUrl =[NSURL URLWithString:[dictionary objectForKey:@"eventImage"]];
-//    NSData *imageData =[NSData dataWithContentsOfURL:eventImageUrl];
-//    UIImage *eventImageImage=[UIImage imageWithData:imageData];
-//    
-//}
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentDirctory =[paths objectAtIndex:0];
+    NSString *imagePath =[documentDirctory stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.jpg",@"cached"]];
+    
+    
+    [data writeToFile:imagePath atomically: NO];
+    
+    return [UIImage imageWithContentsOfFile:imagePath];
+    
+}
 
 /*
 #pragma mark - Navigation

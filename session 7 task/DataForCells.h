@@ -8,11 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DataForCells : UIViewController <NSURLSessionDelegate>
+@interface DataForCells : UIViewController <NSURLSessionDelegate>{
+    NSMutableArray *arrayOfCellObjects;
 
-@property (retain, atomic)NSArray *webServiceArray;
+}
+
+
+
+@property (retain, atomic)NSArray *ServiceArray;
 
 @property (retain)NSMutableArray *DataArray;
+
 
 -(NSMutableArray*)getCellItems: (NSIndexPath *)index :(NSArray *)array;
 

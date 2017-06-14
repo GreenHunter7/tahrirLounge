@@ -9,9 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "EventsTableViewCell.h"
 #import "DataForCells.h"
+#import "AppDelegate.h"
 
-@interface EventsViewController : UIViewController <UITableViewDataSource,UITableViewDelegate>{
+@interface EventsViewController : UIViewController <UITableViewDataSource,UITableViewDelegate,UIApplicationDelegate>{
     
+    AppDelegate *delegateApp;
     
     NSArray *webServiceArray;
     
@@ -20,6 +22,8 @@
     EventsTableViewCell *cell;
     
     DataForCells *webServiceData;
+    
+    NSUserDefaults *UDSavedData;
     
 }
 
