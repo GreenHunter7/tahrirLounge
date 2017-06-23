@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -32,7 +32,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="681" y="-44"/>
+            <point key="canvasLocation" x="443" y="443"/>
         </scene>
         <!--First View Controller-->
         <scene sceneID="6CG-YV-lLW">
@@ -691,20 +691,21 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zpu-4t-08b">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
                                                 </imageView>
-                                                <view alpha="0.90000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CVB-Nu-F7w">
-                                                    <rect key="frame" x="16.666666666666657" y="15" width="380.66666666666663" height="169"/>
+                                                <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CVB-Nu-F7w">
+                                                    <rect key="frame" x="18" y="13" width="378" height="169"/>
                                                     <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" secondItem="CVB-Nu-F7w" secondAttribute="height" multiplier="380:169" id="DP9-6R-3WS"/>
-                                                    </constraints>
                                                 </view>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bmr-gL-mEw">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="bmr-gL-mEw">
                                                     <rect key="frame" x="32.666666666666657" y="48" width="100" height="100"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="100" id="7Zg-OX-fup"/>
                                                         <constraint firstAttribute="width" secondItem="bmr-gL-mEw" secondAttribute="height" multiplier="1:1" id="MCh-em-ToQ"/>
                                                     </constraints>
                                                 </imageView>
+                                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="AqO-tO-nvX">
+                                                    <rect key="frame" x="64.333333333333329" y="79.666666666666671" width="37" height="37"/>
+                                                    <color key="color" red="0.0" green="0.43137254901960786" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </activityIndicatorView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event Start Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iNF-XR-lyz">
                                                     <rect key="frame" x="127.66666666666669" y="158" width="161" height="21"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -766,6 +767,7 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="EeA-iB-0vs" firstAttribute="leading" secondItem="bmr-gL-mEw" secondAttribute="trailing" constant="15" id="0cH-7d-Xlu"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="CVB-Nu-F7w" secondAttribute="trailing" constant="10" id="5zV-KQ-aeU"/>
                                                 <constraint firstItem="EeA-iB-0vs" firstAttribute="trailing" secondItem="fQV-Pd-IMI" secondAttribute="trailing" id="9Oa-kg-jTr"/>
                                                 <constraint firstItem="Dzv-h7-csl" firstAttribute="top" secondItem="fQV-Pd-IMI" secondAttribute="bottom" constant="7" id="9YT-Ru-3zC"/>
                                                 <constraint firstItem="HMi-2c-8uC" firstAttribute="top" secondItem="7tl-aM-pmI" secondAttribute="topMargin" constant="7" id="BrC-2j-uDf"/>
@@ -775,21 +777,23 @@
                                                 <constraint firstItem="fQV-Pd-IMI" firstAttribute="top" secondItem="EeA-iB-0vs" secondAttribute="bottom" constant="8" symbolic="YES" id="LIy-8M-eIR"/>
                                                 <constraint firstItem="Zpu-4t-08b" firstAttribute="height" secondItem="7tl-aM-pmI" secondAttribute="height" id="LiC-2W-Chw"/>
                                                 <constraint firstItem="Zpu-4t-08b" firstAttribute="width" secondItem="7tl-aM-pmI" secondAttribute="width" id="NYR-g9-8Lj"/>
+                                                <constraint firstItem="AqO-tO-nvX" firstAttribute="centerY" secondItem="bmr-gL-mEw" secondAttribute="centerY" id="Npv-pX-wnI"/>
+                                                <constraint firstItem="CVB-Nu-F7w" firstAttribute="leading" secondItem="7tl-aM-pmI" secondAttribute="leadingMargin" constant="10" id="Prf-dT-yaq"/>
                                                 <constraint firstItem="fQV-Pd-IMI" firstAttribute="top" secondItem="HMi-2c-8uC" secondAttribute="bottom" constant="86" id="Ssb-1R-KWK"/>
                                                 <constraint firstItem="HMi-2c-8uC" firstAttribute="leading" secondItem="bmr-gL-mEw" secondAttribute="leading" id="TeO-Oz-lIo"/>
                                                 <constraint firstItem="HMi-2c-8uC" firstAttribute="trailing" secondItem="EeA-iB-0vs" secondAttribute="trailing" id="Z9o-cd-FOe"/>
                                                 <constraint firstItem="Zpu-4t-08b" firstAttribute="top" secondItem="7tl-aM-pmI" secondAttribute="top" id="Zxu-vN-1st"/>
                                                 <constraint firstItem="iNF-XR-lyz" firstAttribute="top" secondItem="fQV-Pd-IMI" secondAttribute="bottom" constant="7" id="bux-VA-Nas"/>
-                                                <constraint firstItem="CVB-Nu-F7w" firstAttribute="centerY" secondItem="7tl-aM-pmI" secondAttribute="centerY" id="e88-zx-Y4b"/>
-                                                <constraint firstItem="CVB-Nu-F7w" firstAttribute="top" secondItem="7tl-aM-pmI" secondAttribute="topMargin" constant="7" id="eC4-7s-vds"/>
+                                                <constraint firstItem="CVB-Nu-F7w" firstAttribute="top" secondItem="7tl-aM-pmI" secondAttribute="topMargin" constant="5" id="eC4-7s-vds"/>
                                                 <constraint firstItem="fQV-Pd-IMI" firstAttribute="leading" secondItem="bmr-gL-mEw" secondAttribute="trailing" constant="18" id="fQh-N6-gCD"/>
                                                 <constraint firstItem="iNF-XR-lyz" firstAttribute="leading" secondItem="Dzv-h7-csl" secondAttribute="trailing" constant="1" id="gfJ-5p-VYE"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="EeA-iB-0vs" secondAttribute="trailing" constant="19" id="h3q-Bd-0Ck"/>
                                                 <constraint firstItem="EeA-iB-0vs" firstAttribute="top" secondItem="HMi-2c-8uC" secondAttribute="bottom" constant="12" id="itr-6J-Lb1"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="cnS-gm-N8V" secondAttribute="trailing" constant="18" id="kKx-n0-bVm"/>
                                                 <constraint firstItem="bmr-gL-mEw" firstAttribute="top" secondItem="7tl-aM-pmI" secondAttribute="topMargin" constant="40" id="kea-n0-nGf"/>
-                                                <constraint firstItem="CVB-Nu-F7w" firstAttribute="centerX" secondItem="7tl-aM-pmI" secondAttribute="centerX" id="qtb-Wa-nZ1"/>
+                                                <constraint firstItem="AqO-tO-nvX" firstAttribute="centerX" secondItem="bmr-gL-mEw" secondAttribute="centerX" id="mQI-wN-Rpy"/>
                                                 <constraint firstItem="bmr-gL-mEw" firstAttribute="leading" secondItem="7tl-aM-pmI" secondAttribute="leadingMargin" constant="24" id="wb0-zB-t3j"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="CVB-Nu-F7w" secondAttribute="bottom" constant="10" id="yjj-sV-oKq"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -798,6 +802,7 @@
                                             <outlet property="eventImage" destination="Zpu-4t-08b" id="k6T-ry-KOj"/>
                                             <outlet property="eventInstractor" destination="fQV-Pd-IMI" id="q2O-xO-YqN"/>
                                             <outlet property="eventName" destination="HMi-2c-8uC" id="eNg-bs-kuL"/>
+                                            <outlet property="imageLoader" destination="AqO-tO-nvX" id="hAx-ak-Egm"/>
                                             <outlet property="instractorImage" destination="bmr-gL-mEw" id="Li1-Dv-kJf"/>
                                             <outlet property="seeMore" destination="cnS-gm-N8V" id="BZi-F6-BBr"/>
                                             <outlet property="startDate" destination="iNF-XR-lyz" id="bwQ-I6-NNg"/>
@@ -1684,12 +1689,13 @@ Tahrir Lounge is a neutral project and all its activities are supported by Germa
         <image name="faceBook" width="26" height="26"/>
         <image name="goethe" width="425" height="150"/>
         <image name="menu" width="50" height="50"/>
+        <image name="placeholder" width="420" height="420"/>
         <image name="scc" width="591" height="524"/>
         <image name="twitter" width="64" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="XE0-9x-ePU"/>
-        <segue reference="CCU-Qs-wLX"/>
-        <segue reference="ldw-Uu-Iqf"/>
+        <segue reference="nVY-ry-oLn"/>
+        <segue reference="ixh-kf-QLU"/>
+        <segue reference="eXF-hC-eQH"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -11,6 +11,9 @@
 @interface EventsTableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *eventName;
 @property (weak, nonatomic) IBOutlet UIImageView *instractorImage;
+
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *imageLoader;
+
 @property (weak, nonatomic) IBOutlet UITextView *details;
 @property (weak, nonatomic) IBOutlet UILabel *eventInstractor;
 @property (weak, nonatomic) IBOutlet UILabel *startDate;

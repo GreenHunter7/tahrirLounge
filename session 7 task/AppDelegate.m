@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "DataForCells.h"
+
 
 @interface AppDelegate ()
 
@@ -19,8 +19,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    _webServiceData = [DataForCells new];
-    [_webServiceData getDataFromApi];
+    
     return YES;
 }
 
