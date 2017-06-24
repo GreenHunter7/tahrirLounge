@@ -7,10 +7,27 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SecondCollectionViewCell.h"
 
-@interface GallerySecondeViewController : UIViewController
+@interface GallerySecondeViewController : UIViewController<UICollectionViewDelegate,UICollectionViewDataSource>{
+
+    SecondCollectionViewCell *cell;
+    
+    
+}
+
+
+
+@property (strong, nonatomic) NSArray *arrayOfimagesUrls;
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *sideBarButton;
 
+@property (weak, nonatomic) IBOutlet UICollectionView *galleryCollectionView;
+@property (strong, nonatomic) IBOutlet UIView *popupContainerView;
+@property (strong, nonatomic) IBOutlet UIImageView *popupImageView;
+
+@property (strong, nonatomic) IBOutlet UIButton *CloseButton;
+
+- (IBAction)CloseImage:(id)sender;
 
 @end

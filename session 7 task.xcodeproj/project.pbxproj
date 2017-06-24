@@ -24,6 +24,8 @@
 		D0BAAC481EBA5AB700794928 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = D0BAAC471EBA5AB700794928 /* MBProgressHUD.m */; };
 		D0DACA671EBD0D8D003460DC /* navigationBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DACA661EBD0D8D003460DC /* navigationBarViewController.m */; };
 		D0DACA6A1EBD19C7003460DC /* GalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DACA691EBD19C7003460DC /* GalleryViewController.m */; };
+		FA067D7D1EFEE34300889C3B /* SecondCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA067D7C1EFEE34300889C3B /* SecondCollectionViewCell.m */; };
+		FA0E7FC51EFE10340055BF91 /* GalleryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0E7FC41EFE10340055BF91 /* GalleryModel.m */; };
 		FAC823FC1EC1F7D700490F7B /* Partners ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC823FB1EC1F7D700490F7B /* Partners ViewController.m */; };
 		FADDBA631EEA3ABB00AD954E /* EventsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FADDBA621EEA3ABB00AD954E /* EventsTableViewCell.m */; };
 		FAFCC5011EC8D1AE00A39DA0 /* GallerySecondeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFCC5001EC8D1AE00A39DA0 /* GallerySecondeViewController.m */; };
@@ -92,6 +94,10 @@
 		D0DACA661EBD0D8D003460DC /* navigationBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = navigationBarViewController.m; sourceTree = "<group>"; };
 		D0DACA681EBD19C7003460DC /* GalleryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GalleryViewController.h; sourceTree = "<group>"; };
 		D0DACA691EBD19C7003460DC /* GalleryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalleryViewController.m; sourceTree = "<group>"; };
+		FA067D7B1EFEE34300889C3B /* SecondCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondCollectionViewCell.h; sourceTree = "<group>"; };
+		FA067D7C1EFEE34300889C3B /* SecondCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondCollectionViewCell.m; sourceTree = "<group>"; };
+		FA0E7FC31EFE10340055BF91 /* GalleryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GalleryModel.h; sourceTree = "<group>"; };
+		FA0E7FC41EFE10340055BF91 /* GalleryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalleryModel.m; sourceTree = "<group>"; };
 		FAC823FA1EC1F7D700490F7B /* Partners ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Partners ViewController.h"; sourceTree = "<group>"; };
 		FAC823FB1EC1F7D700490F7B /* Partners ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Partners ViewController.m"; path = "/Users/momo/Desktop/tahrirLounge/session 7 task/partners/Partners ViewController.m"; sourceTree = "<absolute>"; };
 		FADDBA611EEA3ABB00AD954E /* EventsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsTableViewCell.h; sourceTree = "<group>"; };
@@ -230,6 +236,8 @@
 			children = (
 				1F3B99451EFD8C2B00228F75 /* EventModel.h */,
 				1F3B99461EFD8C2B00228F75 /* EventModel.m */,
+				FA0E7FC31EFE10340055BF91 /* GalleryModel.h */,
+				FA0E7FC41EFE10340055BF91 /* GalleryModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -301,6 +309,8 @@
 				1F569A9F1EBF851400B7111E /* GalleryCellCollectionViewCell.m */,
 				FAFCC4FF1EC8D1AE00A39DA0 /* GallerySecondeViewController.h */,
 				FAFCC5001EC8D1AE00A39DA0 /* GallerySecondeViewController.m */,
+				FA067D7B1EFEE34300889C3B /* SecondCollectionViewCell.h */,
+				FA067D7C1EFEE34300889C3B /* SecondCollectionViewCell.m */,
 			);
 			path = Gallery;
 			sourceTree = "<group>";
@@ -520,6 +530,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA067D7D1EFEE34300889C3B /* SecondCollectionViewCell.m in Sources */,
 				FADDBA631EEA3ABB00AD954E /* EventsTableViewCell.m in Sources */,
 				D0BAAC3A1EBA308600794928 /* AboutUsViewController.m in Sources */,
 				1F2B91961EBFA9AF007CB259 /* teamMemberTableViewCell.m in Sources */,
@@ -532,6 +543,7 @@
 				1F3B993F1EFD7E9700228F75 /* ThreadHelper.m in Sources */,
 				1F3B993E1EFD7E9700228F75 /* HttpClient.m in Sources */,
 				1F2B91951EBFA9AF007CB259 /* teamMembers.m in Sources */,
+				FA0E7FC51EFE10340055BF91 /* GalleryModel.m in Sources */,
 				1F569AA01EBF851400B7111E /* GalleryCellCollectionViewCell.m in Sources */,
 				D0DACA6A1EBD19C7003460DC /* GalleryViewController.m in Sources */,
 				D0BAAC401EBA30E400794928 /* TwitterViewController.m in Sources */,

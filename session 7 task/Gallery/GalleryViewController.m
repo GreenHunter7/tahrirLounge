@@ -9,45 +9,65 @@
 #import "GalleryViewController.h"
 #import "SWRevealViewController.h"
 #import "navigationBarViewController.h"
-
+#import "MBProgressHUD.h"
 #import "GalleryCellCollectionViewCell.h"
+#import "HttpClient.h"
+#import "UIImage+Extension.h"
+#import "GallerySecondeViewController.h"
+
 @interface GalleryViewController ()
 
 @end
 
 @implementation GalleryViewController
 
+@synthesize ImageArray;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-
-		
-    //[self.navigationController.navigationBar addSubview:containerForMenu];
-    
-    [_popupContainerView setHidden:YES];
-    self.popupContainerView.alpha = 0;
-    // Do any additional setup after loading the view.
-    
-    //ImageArry Contained the cells identifiers in row 0 and images identifiers in row 1 .
-    
-    ImageArray = [[NSArray alloc]initWithObjects:@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9", nil];
     
     [_ImagesCollectionView setDelegate:self];
     [_ImagesCollectionView setDataSource:self];
     
+    //[self.navigationController.navigationBar addSubview:containerForMenu];
+    
+    // Do any additional setup after loading the view.
+    
+    //ImageArry Contained the cells identifiers in row 0 and images identifiers in row 1 .
+    [MBProgressHUD showHUDAddedTo:_ImagesCollectionView animated:YES];
+    
+    NSString *api = @"http://tahrirlounge.net/event/api/workshops";
+    HttpClient *httpClient = [HttpClient sharedInstance];
+    
+    [httpClient invokeAPI:api method:HTTPRequestGET parameters:nil paramterFormat:paramterStructureTypeFormData contentTypeValue:ContentTypeValue_None customContentTypeValueForHTTPHeaderField:nil onSuccess:^(NSData * _Nullable data){
+    
+        [MBProgressHUD hideHUDForView:_ImagesCollectionView animated:YES];
+        
+        NSError *error;
+        NSArray *arrayOfData = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
+        
+        NSMutableArray *dataArray= [NSMutableArray new];
+        
+        for(NSDictionary *dictionary in arrayOfData){
+            
+            [dataArray addObject: dictionary];
+            
+        }
+        ImageArray = [dataArray copy];
+        if([ImageArray count] != 0){
+            [_ImagesCollectionView reloadData];
+            [self SlideImageView];
+        }
+    
+    } andFailure:^(NSString * _Nonnull error) {
+        [MBProgressHUD hideHUDForView:_ImagesCollectionView animated:YES];
+    } ];
     
     
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
--(void)viewDidAppear:(BOOL)animated{
     
-   // [self removeAnimated];
     
+    
+    //--------------
     
     navigationBarViewController *navigationBar = [navigationBarViewController new];
     
@@ -61,16 +81,38 @@
     OffsetImages=0; //its for ontimer method to move images
     
     
-    [self SlideImageView];
+    
     
 }
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+
 //------slid image-----
 -(void) SlideImageView{
     
+    [MBProgressHUD showHUDAddedTo:_bigImageView animated:YES];
     
     for (NSInteger i = 0; i < [ImageArray count]; i++) {
         
-        _bigImageView=[[UIImageView alloc] initWithImage:[UIImage imageNamed:ImageArray[i]]];
+        NSDictionary *dictionary = [ImageArray objectAtIndex:i];
+        
+        NSArray *array = [[dictionary objectForKey:@"gallery"] copy];
+        
+        NSString *urlString = [array objectAtIndex:0];
+        
+        NSURL *url = [NSURL URLWithString:urlString];
+        
+        NSData *data = [[NSData alloc]initWithContentsOfURL:url];
+        
+        UIImage *image = [UIImage imageWithData:data];
+        
+        [MBProgressHUD hideHUDForView:_bigImageView animated:YES];
+        
+        _bigImageView=[[UIImageView alloc]initWithImage:image];
         
         _bigImageView.contentMode = UIViewContentModeScaleAspectFit;
         
@@ -82,11 +124,10 @@
         [_BigScrollView setContentSize:CGSizeMake(_BigScrollView.frame.size.width * (CGFloat)i+1, _BigScrollView.frame.size.height)];
         
         [_BigScrollView addSubview:_bigImageView];
-        
     }
     
     [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(onTimer) userInfo:nil repeats:YES];
-    
+    NSLog(@"imageArrayCount : %lu",[ImageArray count]);
 }
 
 //----------the timer----------
@@ -124,22 +165,36 @@
     NSString *cellIdeintifier = @"cellImage";
     
     
-    
-    
-    UIImageView *imageForCell = [[UIImageView alloc]initWithImage:[UIImage imageNamed:ImageArray[indexPath.row]]];
-
-    imageForCell.contentMode = UIViewContentModeScaleAspectFit;
-    
-    
     cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdeintifier forIndexPath:indexPath];
     
     
+    if(!cell){
+        cell = [[GalleryCellCollectionViewCell alloc]init];
+    }
+    gallery = [GalleryModel new];
+    NSArray *array = [gallery arrayOfImage:[ImageArray objectAtIndex:indexPath.item]];
     
-    [cell.viewContainer addSubview:imageForCell];
+    [UIImage downloadImageURL:[array objectAtIndex:0] onSuccess:^(UIImage * _Nullable image) {
+        
+         UIImageView *imageForCell =[[UIImageView alloc]initWithImage:image];
+        
+        imageForCell.contentMode = UIViewContentModeScaleAspectFit;
+        
+        [cell.viewContainer addSubview:imageForCell];
+        
+        imageForCell.frame = CGRectMake(0, 0,cell.frame.size.width,cell.frame.size.height);
+        
+        
+    } andFailure:^(NSString * _Nonnull error) {
+        
+        NSLog(@"Error Cell");
+    
+    }];
+    
     
 
     
-    imageForCell.frame = CGRectMake(0, 0,cell.frame.size.width,cell.frame.size.height);
+    
 
     //cell.contentMode  = UIViewContentModeScaleToFill;
     
@@ -150,40 +205,21 @@
     
     
     
-    
     return cell;
 }
 
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+    
+    _arrayOfImagesUrls = [[NSMutableArray alloc]initWithArray:[gallery arrayOfImage:[ImageArray objectAtIndex:indexPath.item]]];
 
-    [self showAnimated];
-    //[_popupContainerView setHidden:NO];
     
-    
-    
-    
-    _popupImageView =[[UIImageView alloc]initWithImage:[UIImage imageNamed:ImageArray[indexPath.item]]];
-    _popupImageView.contentMode = UIViewContentModeScaleAspectFit;
-    _popupImageView.frame = CGRectMake(0, 0, _popupContainerView.frame.size.width, _popupContainerView.frame.size.height);
-    
-    
-    //shadow for view
-    UIImageView *containerBackground = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Gallery-1"]];
-    
-    [_popupContainerView.layer setShadowOffset:CGSizeMake(0.0f,0.0f)];
-    _popupContainerView.layer.shadowOpacity=0.8;
-    
-    [_popupContainerView addSubview:_popupImageView];
-    [_popupContainerView addSubview:_CloseButton];
-  
-    _popupContainerView.layer.cornerRadius = 8.0f;
-    containerBackground.layer.cornerRadius = 8.0f;
-    _CloseButton.layer.cornerRadius=10;
-    
-    containerBackground.frame = CGRectMake(0, 0, _popupContainerView.frame.size.width, _popupContainerView.frame.size.height) ;
-    [_popupContainerView insertSubview:containerBackground belowSubview:_popupImageView];
+    [self performSegueWithIdentifier:@"goToSecondGallery" sender:self];
+
 }
+
+
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
 
@@ -205,9 +241,20 @@
     return CGSizeMake(cellWidth, cellWidth);
 }
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    
+    GallerySecondeViewController *second = [segue destinationViewController];
+    
+    if ([segue.identifier isEqualToString:@"goToSecondGallery"]) {
+        
+        second.arrayOfimagesUrls = [NSArray arrayWithArray:_arrayOfImagesUrls];
+        
+    }
+   
+}
 
 
--(void)showAnimated {
+/*-(void)showAnimated {
     [_popupContainerView setHidden:NO];
     self.popupContainerView.transform = CGAffineTransformMakeScale(1.3, 1.3);
     self.popupContainerView.alpha = 0 ;
@@ -239,6 +286,6 @@
     
     [_popupImageView removeFromSuperview];
     
-}
+}*/
 
 @end

@@ -10,7 +10,7 @@
 #import "ThreadHelper.h"
 
 @interface UIImage (Extension)
-+ (UIImage *)imageWithColor:(UIColor *)color;
++ (UIImage *_Nullable)imageWithColor:(UIColor *_Nullable)color;
 
 +(void) downloadImageURL:(NSString *_Nonnull) imageUrl onSuccess:(void (^_Nullable)(UIImage * _Nullable image))success andFailure:(void (^_Nonnull)(NSString * _Nonnull error))failure;
 @end

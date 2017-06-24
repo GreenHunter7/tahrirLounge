@@ -64,6 +64,7 @@
         NSLog(@"returneddata: %@",dataArray);
         
         webServiceArray=[dataArray copy];
+        webServiceArray =[[webServiceArray reverseObjectEnumerator] allObjects];
         
         if([webServiceArray count] != 0 ){
             [_eventsTableView reloadData];
@@ -156,7 +157,7 @@
 
 
 
--(UIImage*) storingImages {
+/*-(UIImage*) storingImages {
     
     NSData *data =UIImageJPEGRepresentation([webServiceArray objectAtIndex:0], 1);
     
@@ -169,7 +170,7 @@
     
     return [UIImage imageWithContentsOfFile:imagePath];
     
-}
+}*/
 
 
 

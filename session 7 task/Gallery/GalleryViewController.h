@@ -8,20 +8,27 @@
 
 #import <UIKit/UIKit.h>
 #import "GalleryCellCollectionViewCell.h"
+#import "GalleryModel.h"
 
 @interface GalleryViewController : UIViewController<UICollectionViewDelegate,UICollectionViewDataSource>{
     
     NSInteger OffsetImages;
 
-    NSArray *ImageArray;
+//    NSArray *ImageArray;
     
     NSInteger BackgroundCount;
     
+    
     GalleryCellCollectionViewCell  *cell ;
     
+    GalleryModel *gallery;
     
    
 }
+
+
+@property (retain) NSArray *ImageArray;
+@property (retain) NSMutableArray *arrayOfImagesUrls;
 
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *sideBarButton;
 @property (strong, nonatomic) IBOutlet UIImageView *bigImageView;
@@ -38,5 +45,5 @@
 
 -(void)onTimer;
 
-- (IBAction)CloseImage:(id)sender;
+//- (IBAction)CloseImage:(id)sender;
 @end

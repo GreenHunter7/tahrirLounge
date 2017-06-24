@@ -19,6 +19,5 @@
 @property (weak, nonatomic) IBOutlet UIView *viewContainer;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
--(UIColor*)colorForCell :(NSInteger)index;
 
 @end
