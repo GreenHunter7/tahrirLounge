@@ -210,6 +210,9 @@
                                                 <state key="normal" title="YouTube">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="Nml-cT-KoR" kind="show" id="eCq-Qb-vj5"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.78140473365783691" green="0.086681284010410309" blue="0.075489513576030731" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -362,6 +365,45 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CJI-8f-QYb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4862.3188405797109" y="-2468.4782608695655"/>
+        </scene>
+        <!--You Tube View Controller-->
+        <scene sceneID="b3q-0e-acs">
+            <objects>
+                <viewController id="Nml-cT-KoR" customClass="youTubeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VMz-sR-LgW"/>
+                        <viewControllerLayoutGuide type="bottom" id="wCO-9K-awT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Utf-DW-EZq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M5m-4R-e1O">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="M5m-4R-e1O" firstAttribute="centerY" secondItem="Utf-DW-EZq" secondAttribute="centerY" id="BFm-QC-bmi"/>
+                            <constraint firstItem="M5m-4R-e1O" firstAttribute="height" secondItem="Utf-DW-EZq" secondAttribute="height" id="THM-7e-7eB"/>
+                            <constraint firstItem="M5m-4R-e1O" firstAttribute="width" secondItem="Utf-DW-EZq" secondAttribute="width" id="oTw-ZN-2oQ"/>
+                            <constraint firstItem="M5m-4R-e1O" firstAttribute="centerX" secondItem="Utf-DW-EZq" secondAttribute="centerX" id="yBu-bh-uHv"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="lTy-gE-qJk">
+                        <barButtonItem key="leftBarButtonItem" image="menu" id="Ncq-IQ-oxc"/>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="YouTubeWebView" destination="M5m-4R-e1O" id="nsc-3s-F3y"/>
+                        <outlet property="sideBarButton" destination="Ncq-IQ-oxc" id="J1k-Ws-zyM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OQz-sg-Wd7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4848" y="-4010"/>
         </scene>
         <!--Gallery View Controller-->
         <scene sceneID="Vgg-Qd-r5Z">
@@ -865,8 +907,45 @@
                                             <segue destination="vsp-mX-aeX" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="Reb-LH-Nkn"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ourTeam" rowHeight="44" id="f8i-of-c8b">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="YouTube" rowHeight="44" id="ZBP-0E-Eb3">
                                         <rect key="frame" x="0.0" y="336" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZBP-0E-Eb3" id="vAB-Lp-Uwf">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="YouTube" translatesAutoresizingMaskIntoConstraints="NO" id="nvR-Yw-oSz">
+                                                    <rect key="frame" x="41" y="4" width="35" height="35"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="35" id="ldP-3f-07I"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YouTube" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yaY-Cj-ssN">
+                                                    <rect key="frame" x="89" y="8" width="150" height="26"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="25.5" id="LAq-B4-pqA"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="b1L-2Q-TJU"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="nvR-Yw-oSz" firstAttribute="leading" secondItem="vAB-Lp-Uwf" secondAttribute="leading" constant="41" id="cIM-HO-ZRH"/>
+                                                <constraint firstItem="yaY-Cj-ssN" firstAttribute="top" secondItem="vAB-Lp-Uwf" secondAttribute="top" constant="8" id="hvl-T9-T4r"/>
+                                                <constraint firstItem="nvR-Yw-oSz" firstAttribute="centerY" secondItem="vAB-Lp-Uwf" secondAttribute="centerY" id="kEI-Vu-5TK"/>
+                                                <constraint firstItem="yaY-Cj-ssN" firstAttribute="leading" secondItem="nvR-Yw-oSz" secondAttribute="trailing" constant="13" id="laW-ea-hE7"/>
+                                                <constraint firstItem="nvR-Yw-oSz" firstAttribute="top" secondItem="vAB-Lp-Uwf" secondAttribute="topMargin" constant="-4" id="qFe-Aj-jKu"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.29317543670000001" green="0.70123479509999997" blue="0.83575563720000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <segue destination="CWd-mN-WCw" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="e59-qX-0Dh"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ourTeam" rowHeight="44" id="f8i-of-c8b">
+                                        <rect key="frame" x="0.0" y="380" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="f8i-of-c8b" id="5L1-mg-BZf">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
@@ -903,7 +982,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="partners" rowHeight="44" id="u6l-mo-g4P">
-                                        <rect key="frame" x="0.0" y="380" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="424" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="u6l-mo-g4P" id="KUK-C7-sqq">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
@@ -1976,6 +2055,24 @@ Tahrir Lounge is a neutral project and all its activities are supported by Germa
             </objects>
             <point key="canvasLocation" x="1978" y="2160"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Buw-uk-Kaj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CWd-mN-WCw" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aaA-hw-2rk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Nml-cT-KoR" kind="relationship" relationship="rootViewController" id="eMI-wW-JyR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9nq-uC-uhY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3957" y="-4010"/>
+        </scene>
     </scenes>
     <resources>
         <image name="8" width="960" height="607"/>
@@ -1991,6 +2088,7 @@ Tahrir Lounge is a neutral project and all its activities are supported by Germa
         <image name="News" width="50" height="50"/>
         <image name="Phone" width="50" height="50"/>
         <image name="TL logo" width="9921" height="9921"/>
+        <image name="YouTube" width="50" height="50"/>
         <image name="anna" width="1128" height="432"/>
         <image name="empthy" width="300" height="105"/>
         <image name="faceBook" width="26" height="26"/>
@@ -2003,13 +2101,14 @@ Tahrir Lounge is a neutral project and all its activities are supported by Germa
     <inferredMetricsTieBreakers>
         <segue reference="eXF-hC-eQH"/>
         <segue reference="nVY-ry-oLn"/>
-        <segue reference="uYq-MF-8x3"/>
+        <segue reference="3Tg-zi-8DC"/>
+        <segue reference="bRO-A5-Pek"/>
         <segue reference="Zwi-Uy-RAN"/>
+        <segue reference="E8a-H4-aRR"/>
+        <segue reference="eCq-Qb-vj5"/>
+        <segue reference="arJ-yx-Wp3"/>
         <segue reference="QqE-Zu-gRD"/>
         <segue reference="KBa-OK-c0L"/>
-        <segue reference="E8a-H4-aRR"/>
-        <segue reference="bRO-A5-Pek"/>
-        <segue reference="3Tg-zi-8DC"/>
-        <segue reference="VjT-74-z0f"/>
+        <segue reference="uYq-MF-8x3"/>
     </inferredMetricsTieBreakers>
 </document>

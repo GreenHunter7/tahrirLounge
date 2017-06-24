@@ -32,11 +32,6 @@
     
     [navigationBar childNavigationBarCustom:_sideBarButton :self.navigationItem :self.navigationController.navigationBar :@"Gallery"];
    
-    if ([_arrayOfimagesUrls count] != 0) {
-        
-        
-
-    }
     
     
     NSLog(@"arrayForSocend : %lu",[_arrayOfimagesUrls count]);
