@@ -10,6 +10,7 @@
 #import "ViewController.h"
 #import "UITeamMemberDetail.h"
 #import "teamMemberTableViewCell.h"
+#import "HttpClient.h"
 
 //#import "webService.h"
 //#import "teamMembers.h"
@@ -23,11 +24,49 @@
 
 @implementation ViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    teammembersList=[NSMutableArray new];
+
+    
+    [MBProgressHUD showHUDAddedTo:_listTeamView animated:YES];
+    
     NSString* apiURL=@"http://209.126.105.42:8001/iosapi/getAllTeamMembers";
-    [self returnDataFromAPI:apiURL];
+    
+    HttpClient *httpClient = [HttpClient sharedInstance];
+
+    
+    [httpClient invokeAPI:apiURL method:HTTPRequestGET parameters:nil paramterFormat:paramterStructureTypeFormData contentTypeValue:ContentTypeValue_None customContentTypeValueForHTTPHeaderField:nil onSuccess:^(NSData * _Nullable data){
+        
+        [MBProgressHUD hideHUDForView:_listTeamView animated:YES];
+        
+        NSError *error;
+        NSDictionary *DictionaryOfData = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
+        
+        NSArray * values = [DictionaryOfData allValues];
+        
+        NSMutableArray *dataArray= [NSMutableArray new];
+        
+        for(NSArray *array in values){
+            
+            [dataArray addObject: array];
+            
+        }
+        teammembersList =[teamMembers getAllTeamMembers: dataArray];
+        
+        NSLog(@"List: %lu",[teammembersList count]);
+        if([teammembersList count] != 0){
+            
+            [_listTeamView reloadData];
+        }
+        
+    } andFailure:^(NSString * _Nonnull error) {
+        [MBProgressHUD hideHUDForView:_listTeamView animated:YES];
+    } ];
+    
     //---------
     
     navigationBarViewController *navigationBar = [navigationBarViewController new];
@@ -41,7 +80,6 @@
 
     
     
-    teammembersList=[NSMutableArray new];
     
   
     
@@ -67,87 +105,23 @@
 
 
 
--(void) returnDataFromAPI: (NSString*) apiURL
-{
-    // 1
-    
-    NSURL *url = [NSURL URLWithString:apiURL];
-    
-    NSMutableArray *returnData=[NSMutableArray new];
-    // 2
-  // [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    NSURLSessionDataTask *downloadTask = [[NSURLSession sharedSession]
-                                          dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-                                              // 4: Handle response here
-                                            
-                                              //[MBProgressHUD hideHUDForView:self.view animated:YES];
-                                              
-                                              if (!error)
-                                              {
-                                                  NSError *JSONError = nil;
-                                                  
-                                                  NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data
-                                                                                                             options:0
-                                                                                                               error:&JSONError];
-                                                  if (JSONError)
-                                                  {
-                                                      NSLog(@"Serialization error: %@", JSONError.localizedDescription);
-                                                  }
-                                                  else
-                                                  {
-                                                      NSLog(@"Response: %@", dictionary);
-                                                      NSArray * values = [dictionary allValues];
-                                                      
-                                                      for (NSArray *recipeArray in values)
-                                                      {
-                                                          [returnData addObject:recipeArray];
-                                                      }
-                                                      NSLog(@"Array: %@", values);
-                                                      
-                                                      
-                                                      
-                                                      
-                                                      
-                                                      teammembersList =[teamMembers getAllTeamMembers: returnData];
-                                                      
-                                                      [_listTeamView reloadData];
-                                                      
-                                                      
-                                                  }
-                                              }
-                                              else
-                                              {
-                                                  NSLog(@"Error: %@", error.localizedDescription);
-                                              }
-                                              
-                                              
-                                          }];
-    
-    // 3
-    [downloadTask resume];
-    
-   
-}
-
-
-
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"cell";
+//    static NSString *CellIdentifier = @"cell";
     
     NSInteger position=indexPath.row;
     teamMembers *teamMemberOBJ=[teamMembers new];
     teamMemberOBJ=[teammembersList objectAtIndex:position];
     
     
-    /*
+    
      static NSString *CellIdentifier = @"teamMemberCell";
      
      
      
      
-     
-     teamMemberTableViewCell *cella =[[teamMemberTableViewCell alloc]initWithStyle:UITableViewCellFocusStyleCustom reuseIdentifier:CellIdentifier];
+    teamMemberTableViewCell *cella = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
      
      
      cella.NameLbl.text=teamMemberOBJ.memberName;
@@ -162,14 +136,18 @@
      
      NSData *imageData = [[NSData alloc] initWithContentsOfURL:imageURL];
      UIImage *image = [[UIImage alloc] initWithData:imageData];
-     
+    
      cella.cellImage.image=image;
+    
      }
      
-     */
+     
     
+    /*
+    teamMemberTableViewCell *cella = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (!cella){
     
-    UITableViewCell *cella =[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    teamMemberTableViewCell *cella =[[teamMemberTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     
     cella.textLabel.text=teamMemberOBJ.memberName;
     
@@ -183,9 +161,15 @@
         NSData *imageData = [[NSData alloc] initWithContentsOfURL:imageURL];
         UIImage *image = [[UIImage alloc] initWithData:imageData];
         
-        cella.imageView.image=image;
-    }
-    
+
+        
+        [cella.cellImage setImage:image];
+        
+        cella.cellImage.contentMode = UIViewContentModeScaleAspectFit;
+
+        
+        }
+    }*/
     return  cella;
 }
 

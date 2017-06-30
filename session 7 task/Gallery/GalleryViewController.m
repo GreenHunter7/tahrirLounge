@@ -176,7 +176,7 @@
     
     [UIImage downloadImageURL:[array objectAtIndex:0] onSuccess:^(UIImage * _Nullable image) {
         
-         UIImageView *imageForCell =[[UIImageView alloc]initWithImage:image];
+        UIImageView *imageForCell =[[UIImageView alloc]initWithImage:image];
         
         imageForCell.contentMode = UIViewContentModeScaleAspectFit;
         

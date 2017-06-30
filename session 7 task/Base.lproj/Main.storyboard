@@ -424,7 +424,7 @@
                                 </constraints>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bwa-nc-H2d">
-                                <rect key="frame" x="0.0" y="20" width="414" height="368"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="368"/>
                                 <subviews>
                                     <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2xc-Da-mpC">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="368"/>
@@ -440,7 +440,7 @@
                                 </constraints>
                             </scrollView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="sO3-6W-E02">
-                                <rect key="frame" x="10" y="388" width="394" height="348"/>
+                                <rect key="frame" x="10" y="432" width="394" height="304"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="O2b-qK-Qo7">
                                     <size key="itemSize" width="100" height="100"/>
@@ -527,7 +527,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="PRQ-Su-SqQ">
-                                <rect key="frame" x="0.0" y="67" width="414" height="669"/>
+                                <rect key="frame" x="0.0" y="111" width="414" height="669"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="PRQ-Su-SqQ" secondAttribute="height" multiplier="138:223" id="UZn-16-glq"/>
@@ -1736,25 +1736,26 @@ Tahrir Lounge is a neutral project and all its activities are supported by Germa
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="56" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HeS-o1-NNt">
-                                <rect key="frame" x="2" y="114" width="410" height="576"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="56" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HeS-o1-NNt">
+                                <rect key="frame" x="2" y="72" width="410" height="618"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="teamMemberCell" rowHeight="56" id="yhC-eU-tgl" customClass="teamMemberTableViewCell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="teamMemberCell" rowHeight="56" id="yhC-eU-tgl" customClass="teamMemberTableViewCell">
                                         <rect key="frame" x="0.0" y="28" width="410" height="56"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yhC-eU-tgl" id="7Eh-ZI-gg0">
-                                            <rect key="frame" x="0.0" y="0.0" width="410" height="55.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="410" height="56"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3Hz-Ob-xzs">
-                                                    <rect key="frame" x="2" y="1" width="104" height="52"/>
+                                                <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3Hz-Ob-xzs">
+                                                    <rect key="frame" x="2" y="5" width="92" height="46"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="3Hz-Ob-xzs" secondAttribute="height" multiplier="2:1" id="3TA-2W-MvD"/>
+                                                        <constraint firstAttribute="width" constant="92" id="lNk-dz-8PH"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SLD-Gx-ptl">
-                                                    <rect key="frame" x="109" y="2" width="299" height="25"/>
+                                                    <rect key="frame" x="97" y="2" width="311" height="25"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="25" id="wB0-ms-LO1"/>
                                                     </constraints>
@@ -1763,7 +1764,7 @@ Tahrir Lounge is a neutral project and all its activities are supported by Germa
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VFg-Y8-1tc">
-                                                    <rect key="frame" x="109" y="26" width="299" height="25"/>
+                                                    <rect key="frame" x="97" y="26" width="311" height="25"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="25" id="3r1-PK-Nv0"/>
                                                     </constraints>
@@ -1773,17 +1774,18 @@ Tahrir Lounge is a neutral project and all its activities are supported by Germa
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="3Hz-Ob-xzs" secondAttribute="bottom" constant="2" id="1ZI-Rn-T68"/>
                                                 <constraint firstItem="VFg-Y8-1tc" firstAttribute="top" secondItem="7Eh-ZI-gg0" secondAttribute="topMargin" constant="18" id="EJS-Ag-hTr"/>
+                                                <constraint firstAttribute="bottom" secondItem="3Hz-Ob-xzs" secondAttribute="bottom" constant="5" id="KCw-Fx-0Ne"/>
                                                 <constraint firstItem="SLD-Gx-ptl" firstAttribute="top" secondItem="7Eh-ZI-gg0" secondAttribute="top" constant="2" id="NKj-7T-q3g"/>
+                                                <constraint firstItem="3Hz-Ob-xzs" firstAttribute="top" secondItem="7Eh-ZI-gg0" secondAttribute="top" constant="5" id="YUr-C7-mXK"/>
                                                 <constraint firstItem="VFg-Y8-1tc" firstAttribute="trailing" secondItem="SLD-Gx-ptl" secondAttribute="trailing" id="dNy-I1-RwL"/>
-                                                <constraint firstItem="3Hz-Ob-xzs" firstAttribute="top" secondItem="7Eh-ZI-gg0" secondAttribute="top" constant="1" id="deU-Yb-COy"/>
                                                 <constraint firstItem="3Hz-Ob-xzs" firstAttribute="leading" secondItem="7Eh-ZI-gg0" secondAttribute="leading" constant="2" id="nFJ-TG-9mD"/>
                                                 <constraint firstItem="SLD-Gx-ptl" firstAttribute="leading" secondItem="3Hz-Ob-xzs" secondAttribute="trailing" constant="3" id="tvv-b1-tUJ"/>
                                                 <constraint firstAttribute="trailing" secondItem="SLD-Gx-ptl" secondAttribute="trailing" constant="2" id="tvw-13-wlm"/>
                                                 <constraint firstItem="VFg-Y8-1tc" firstAttribute="leading" secondItem="SLD-Gx-ptl" secondAttribute="leading" id="u3V-kB-2eb"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <outlet property="NameLbl" destination="SLD-Gx-ptl" id="jA3-ey-goC"/>
                                             <outlet property="cellImage" destination="3Hz-Ob-xzs" id="OkP-Cs-aBa"/>
@@ -1792,25 +1794,13 @@ Tahrir Lounge is a neutral project and all its activities are supported by Germa
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OUR TEAM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZN1-oZ-lz3">
-                                <rect key="frame" x="5" y="69" width="404" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="0VN-9f-4HD"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="HeS-o1-NNt" firstAttribute="leading" secondItem="wQn-A8-I4b" secondAttribute="leading" constant="2" id="8vf-Av-Sjy"/>
                             <constraint firstAttribute="trailing" secondItem="HeS-o1-NNt" secondAttribute="trailing" constant="2" id="B7M-0L-9oP"/>
-                            <constraint firstItem="HeS-o1-NNt" firstAttribute="top" secondItem="ZN1-oZ-lz3" secondAttribute="bottom" constant="5" id="EVK-eG-rar"/>
-                            <constraint firstItem="ZN1-oZ-lz3" firstAttribute="leading" secondItem="wQn-A8-I4b" secondAttribute="leading" constant="5" id="FLe-Qy-lGZ"/>
-                            <constraint firstItem="ZN1-oZ-lz3" firstAttribute="top" secondItem="u5u-hi-b3R" secondAttribute="bottom" constant="5" id="Kna-GR-Cp0"/>
                             <constraint firstItem="KCI-nb-jBY" firstAttribute="top" secondItem="HeS-o1-NNt" secondAttribute="bottom" constant="2" id="RQe-bq-bRi"/>
-                            <constraint firstAttribute="trailing" secondItem="ZN1-oZ-lz3" secondAttribute="trailing" constant="5" id="nKI-AR-evI"/>
+                            <constraint firstItem="HeS-o1-NNt" firstAttribute="top" secondItem="u5u-hi-b3R" secondAttribute="bottom" constant="8" symbolic="YES" id="q9Q-p7-lSX"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -1826,7 +1816,7 @@ Tahrir Lounge is a neutral project and all its activities are supported by Germa
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ioK-4t-bO6" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4864" y="1349"/>
+            <point key="canvasLocation" x="4863.768115942029" y="1348.3695652173915"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="NlN-oi-SCv">
@@ -1892,7 +1882,7 @@ Tahrir Lounge is a neutral project and all its activities are supported by Germa
                                     <navigationItem title="Our Team" id="LoC-MI-9yq">
                                         <barButtonItem key="leftBarButtonItem" title="back" id="VP4-nE-nZY">
                                             <connections>
-                                                <segue destination="f6E-qa-MpR" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="ldw-Uu-Iqf"/>
+                                                <segue destination="f6E-qa-MpR" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="xqh-9Y-J9h"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -2071,7 +2061,7 @@ Tahrir Lounge is a neutral project and all its activities are supported by Germa
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9nq-uC-uhY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3957" y="-4010"/>
+            <point key="canvasLocation" x="3961" y="-4010"/>
         </scene>
     </scenes>
     <resources>
@@ -2099,16 +2089,16 @@ Tahrir Lounge is a neutral project and all its activities are supported by Germa
         <image name="twitter" width="64" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="eXF-hC-eQH"/>
-        <segue reference="nVY-ry-oLn"/>
-        <segue reference="3Tg-zi-8DC"/>
+        <segue reference="VjT-74-z0f"/>
         <segue reference="bRO-A5-Pek"/>
-        <segue reference="Zwi-Uy-RAN"/>
-        <segue reference="E8a-H4-aRR"/>
-        <segue reference="eCq-Qb-vj5"/>
-        <segue reference="arJ-yx-Wp3"/>
+        <segue reference="eXF-hC-eQH"/>
+        <segue reference="eMI-wW-JyR"/>
         <segue reference="QqE-Zu-gRD"/>
         <segue reference="KBa-OK-c0L"/>
+        <segue reference="3Tg-zi-8DC"/>
+        <segue reference="Zwi-Uy-RAN"/>
+        <segue reference="E8a-H4-aRR"/>
         <segue reference="uYq-MF-8x3"/>
+        <segue reference="xqh-9Y-J9h"/>
     </inferredMetricsTieBreakers>
 </document>
