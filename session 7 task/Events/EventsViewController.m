@@ -99,7 +99,7 @@
     
     static NSString *cellIdentifier = @"EventsTableViewCell";
     
-    cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    EventsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
     if (!cell) {
         cell = [[EventsTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];

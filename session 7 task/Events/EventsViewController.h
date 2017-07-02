@@ -14,7 +14,7 @@
     
     NSArray *webServiceArray;
     
-    EventsTableViewCell *cell;
+    
     
     NSIndexPath *index;
     
