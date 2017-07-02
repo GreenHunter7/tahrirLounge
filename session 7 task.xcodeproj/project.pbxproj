@@ -29,6 +29,7 @@
 		FA0E7FC51EFE10340055BF91 /* GalleryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0E7FC41EFE10340055BF91 /* GalleryModel.m */; };
 		FAC823FC1EC1F7D700490F7B /* Partners ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC823FB1EC1F7D700490F7B /* Partners ViewController.m */; };
 		FADDBA631EEA3ABB00AD954E /* EventsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FADDBA621EEA3ABB00AD954E /* EventsTableViewCell.m */; };
+		FAE725251F0696C3008D6E9A /* seeMoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE725241F0696C3008D6E9A /* seeMoreViewController.m */; };
 		FAFCC5011EC8D1AE00A39DA0 /* GallerySecondeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFCC5001EC8D1AE00A39DA0 /* GallerySecondeViewController.m */; };
 		FAFF19F51EB92A5A00D12ECE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFF19F41EB92A5A00D12ECE /* main.m */; };
 		FAFF19F81EB92A5A00D12ECE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFF19F71EB92A5A00D12ECE /* AppDelegate.m */; };
@@ -105,6 +106,8 @@
 		FAC823FB1EC1F7D700490F7B /* Partners ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Partners ViewController.m"; path = "/Users/momo/Desktop/tahrirLounge/session 7 task/partners/Partners ViewController.m"; sourceTree = "<absolute>"; };
 		FADDBA611EEA3ABB00AD954E /* EventsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsTableViewCell.h; sourceTree = "<group>"; };
 		FADDBA621EEA3ABB00AD954E /* EventsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsTableViewCell.m; sourceTree = "<group>"; };
+		FAE725231F0696C3008D6E9A /* seeMoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = seeMoreViewController.h; sourceTree = "<group>"; };
+		FAE725241F0696C3008D6E9A /* seeMoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = seeMoreViewController.m; sourceTree = "<group>"; };
 		FAFCC4FF1EC8D1AE00A39DA0 /* GallerySecondeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GallerySecondeViewController.h; sourceTree = "<group>"; };
 		FAFCC5001EC8D1AE00A39DA0 /* GallerySecondeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GallerySecondeViewController.m; sourceTree = "<group>"; };
 		FAFF19F01EB92A5A00D12ECE /* session 7 task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "session 7 task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -253,6 +256,8 @@
 				D0BAAC331EBA303B00794928 /* EventsViewController.m */,
 				FADDBA611EEA3ABB00AD954E /* EventsTableViewCell.h */,
 				FADDBA621EEA3ABB00AD954E /* EventsTableViewCell.m */,
+				FAE725231F0696C3008D6E9A /* seeMoreViewController.h */,
+				FAE725241F0696C3008D6E9A /* seeMoreViewController.m */,
 			);
 			name = events;
 			path = Events;
@@ -554,6 +559,7 @@
 				D0DACA671EBD0D8D003460DC /* navigationBarViewController.m in Sources */,
 				1F2B91971EBFA9AF007CB259 /* UITeamMemberDetail.m in Sources */,
 				1F3B993F1EFD7E9700228F75 /* ThreadHelper.m in Sources */,
+				FAE725251F0696C3008D6E9A /* seeMoreViewController.m in Sources */,
 				1F3B993E1EFD7E9700228F75 /* HttpClient.m in Sources */,
 				1F2B91951EBFA9AF007CB259 /* teamMembers.m in Sources */,
 				FA0E7FC51EFE10340055BF91 /* GalleryModel.m in Sources */,

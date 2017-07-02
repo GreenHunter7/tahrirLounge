@@ -77,7 +77,7 @@
     [navigationBar customSetup:_sideBarButton :self];
     [navigationBar customizeNavigation:_sideBarButton :self :navigationBarColorBlue :@"Our Team"];
     
-
+    [navigationBar makeImageBlur:_blurBackground];
     
     
     
@@ -138,8 +138,12 @@
      UIImage *image = [[UIImage alloc] initWithData:imageData];
     
      cella.cellImage.image=image;
+         cella.cellImage.contentMode = UIViewContentModeScaleAspectFit;
+         cella.background.layer.cornerRadius = 10;
+         cella.background.layer.shadowOpacity = 0.6f;
+         cella.background.layer.opacity= 0.6f;
     
-     }
+    }
      
      
     

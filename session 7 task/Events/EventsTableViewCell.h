@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface EventsTableViewCell : UITableViewCell
+
 @property (weak, nonatomic) IBOutlet UILabel *eventName;
 @property (weak, nonatomic) IBOutlet UIImageView *instractorImage;
 
@@ -20,6 +21,5 @@
 @property (weak, nonatomic) IBOutlet UIImageView *eventImage;
 @property (weak, nonatomic) IBOutlet UIView *background;
 @property (weak, nonatomic) IBOutlet UIButton *seeMore;
-- (IBAction)seeMoreAction:(id)sender;
 
 @end

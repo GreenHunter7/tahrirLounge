@@ -28,6 +28,9 @@
     _galleryCollectionView.dataSource = self;
     
     [_popupContainerView setHidden:YES];
+    
+    //-------
+    
     navigationBarViewController *navigationBar = [navigationBarViewController new];
     
     [navigationBar childNavigationBarCustom:_sideBarButton :self.navigationItem :self.navigationController.navigationBar :@"Gallery"];

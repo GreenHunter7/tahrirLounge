@@ -14,11 +14,16 @@
     
     NSArray *webServiceArray;
     
+    EventsTableViewCell *cell;
+    
+    NSIndexPath *index;
+    
 }
-
 
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *sideBarButton;
 @property (weak, nonatomic) IBOutlet UITableView *eventsTableView;
+@property (weak, nonatomic) IBOutlet UIImageView *blurBackground;
 
+- (IBAction)seeMoreAction:(id)sender;
 
 @end

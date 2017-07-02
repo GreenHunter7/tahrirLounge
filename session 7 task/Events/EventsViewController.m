@@ -14,6 +14,7 @@
 #import "HttpClient.h"
 #import "EventModel.h"
 #import "UIImage+Extension.h"
+#import "seeMoreViewController.h"
 
 @interface EventsViewController ()
 
@@ -36,6 +37,8 @@
     
     [navigationBar customSetup:_sideBarButton :self];
     [navigationBar customizeNavigation:_sideBarButton :self :navigationBarColorBlue :@"Events"];
+    [navigationBar makeImageBlur:_blurBackground];
+    
    //-----------
    
     
@@ -78,7 +81,6 @@
     }];
     
     
-    
 }
 
 
@@ -97,7 +99,7 @@
     
     static NSString *cellIdentifier = @"EventsTableViewCell";
     
-    EventsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
     if (!cell) {
         cell = [[EventsTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
@@ -109,7 +111,7 @@
     [UIImage downloadImageURL:event.eventImage onSuccess:^(UIImage * _Nullable image) {
         cell.eventImage.image=image;
     } andFailure:^(NSString * _Nonnull error) {
-        
+        NSLog(@"imageFailuer");
     }];
     
     [cell.imageLoader startAnimating];
@@ -143,15 +145,26 @@
     
     
     
-    
     return cell;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
-    
-    
   return [webServiceArray count];
+}
+
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+
+    seeMoreViewController *seeMore = [segue destinationViewController];
+    
+    if ([segue.identifier isEqualToString:@"go"]) {
+        
+        
+        EventModel *event=[webServiceArray objectAtIndex:index.row];
+        seeMore.event = event;
+    }
+
 }
 
 
@@ -174,4 +187,14 @@
 
 
 
+- (IBAction)seeMoreAction:(id)sender {
+    
+   
+    CGPoint point = [sender convertPoint:CGPointZero toView:_eventsTableView];
+    
+    index = [self.eventsTableView indexPathForRowAtPoint:point];
+    
+    [self performSegueWithIdentifier:@"go" sender:self];
+    
+}
 @end
