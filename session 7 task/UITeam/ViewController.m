@@ -8,7 +8,6 @@
 
 
 #import "ViewController.h"
-#import "UITeamMemberDetail.h"
 #import "teamMemberTableViewCell.h"
 #import "HttpClient.h"
 
@@ -131,15 +130,24 @@
      if(teamMemberOBJ.imagePath )
      {
      
-     imagePath=teamMemberOBJ.imagePath ;
-     NSURL* imageURL=[[NSURL alloc] initWithString:imagePath];
+		 imagePath=teamMemberOBJ.imagePath ;
+		 NSURL* imageURL=[[NSURL alloc] initWithString:imagePath];
      
-     NSData *imageData = [[NSData alloc] initWithContentsOfURL:imageURL];
-     UIImage *image = [[UIImage alloc] initWithData:imageData];
-    
-     cella.cellImage.image=image;
-         cella.cellImage.contentMode = UIViewContentModeScaleAspectFit;
-         cella.background.layer.cornerRadius = 10;
+		 NSData *imageData = [[NSData alloc] initWithContentsOfURL:imageURL];
+		 UIImage *image = [[UIImage alloc] initWithData:imageData];
+	
+
+		 cella.cellImage.image=image;
+		 
+		 
+		 
+		 cella.cellImage.layer.cornerRadius = cella.cellImage.frame.size.height / 2 ;
+		 cella.cellImage.clipsToBounds = true;
+		 
+         cella.cellImage.contentMode = UIViewContentModeScaleAspectFill;
+		 
+		 
+		 cella.background.layer.cornerRadius = 10;
          cella.background.layer.shadowOpacity = 0.6f;
          cella.background.layer.opacity= 0.6f;
     
@@ -214,17 +222,5 @@
     NSLog(@" clicked : ");
 }
 
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    if([[segue identifier] isEqualToString:@"teamMemberDetail"])
-    {
-        //UITeamMemberDetail *viewTeamDetail=[[UITeamMemberDetail alloc] initWithNibName:@"UITeamMemberDetail" bundle:nil];
-        
-        UITeamMemberDetail *viewTeamDetail=[segue destinationViewController];
-        viewTeamDetail.teamMemberOBJ=_selectedteamMemberOBJ;
-        
-        [MBProgressHUD hideHUDForView:self.view animated:YES];
-        
-    }
-}
+
 @end

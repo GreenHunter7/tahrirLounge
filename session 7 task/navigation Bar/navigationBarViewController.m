@@ -8,7 +8,6 @@
 
 #import "navigationBarViewController.h"
 #import "SWRevealViewController.h"
-#import "UITeamMemberDetail.h"
 #import "SecondeViewController.h"
 
 

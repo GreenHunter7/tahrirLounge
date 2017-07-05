@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		1F2B91951EBFA9AF007CB259 /* teamMembers.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2B918F1EBFA9AF007CB259 /* teamMembers.m */; };
 		1F2B91961EBFA9AF007CB259 /* teamMemberTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2B91911EBFA9AF007CB259 /* teamMemberTableViewCell.m */; };
-		1F2B91971EBFA9AF007CB259 /* UITeamMemberDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2B91931EBFA9AF007CB259 /* UITeamMemberDetail.m */; };
 		1F3B993E1EFD7E9700228F75 /* HttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3B99351EFD7E9700228F75 /* HttpClient.m */; };
 		1F3B993F1EFD7E9700228F75 /* ThreadHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3B99381EFD7E9700228F75 /* ThreadHelper.m */; };
 		1F3B99401EFD7E9700228F75 /* UIImage+animatedGIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3B993B1EFD7E9700228F75 /* UIImage+animatedGIF.m */; };
@@ -66,8 +65,6 @@
 		1F2B918F1EBFA9AF007CB259 /* teamMembers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = teamMembers.m; path = ../UITeam/teamMembers.m; sourceTree = "<group>"; };
 		1F2B91901EBFA9AF007CB259 /* teamMemberTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = teamMemberTableViewCell.h; path = ../UITeam/teamMemberTableViewCell.h; sourceTree = "<group>"; };
 		1F2B91911EBFA9AF007CB259 /* teamMemberTableViewCell.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = teamMemberTableViewCell.m; path = ../UITeam/teamMemberTableViewCell.m; sourceTree = "<group>"; };
-		1F2B91921EBFA9AF007CB259 /* UITeamMemberDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UITeamMemberDetail.h; path = ../UITeam/UITeamMemberDetail.h; sourceTree = "<group>"; };
-		1F2B91931EBFA9AF007CB259 /* UITeamMemberDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UITeamMemberDetail.m; path = ../UITeam/UITeamMemberDetail.m; sourceTree = "<group>"; };
 		1F3B99341EFD7E9700228F75 /* HttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpClient.h; sourceTree = "<group>"; };
 		1F3B99351EFD7E9700228F75 /* HttpClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpClient.m; sourceTree = "<group>"; };
 		1F3B99371EFD7E9700228F75 /* ThreadHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThreadHelper.h; sourceTree = "<group>"; };
@@ -168,8 +165,6 @@
 				1F2B91911EBFA9AF007CB259 /* teamMemberTableViewCell.m */,
 				FAFF19F91EB92A5A00D12ECE /* ViewController.h */,
 				FAFF19FA1EB92A5A00D12ECE /* ViewController.m */,
-				1F2B91921EBFA9AF007CB259 /* UITeamMemberDetail.h */,
-				1F2B91931EBFA9AF007CB259 /* UITeamMemberDetail.m */,
 			);
 			path = UITEam;
 			sourceTree = "<group>";
@@ -557,7 +552,6 @@
 				1F3B99471EFD8C2B00228F75 /* EventModel.m in Sources */,
 				FAFF19F81EB92A5A00D12ECE /* AppDelegate.m in Sources */,
 				D0DACA671EBD0D8D003460DC /* navigationBarViewController.m in Sources */,
-				1F2B91971EBFA9AF007CB259 /* UITeamMemberDetail.m in Sources */,
 				1F3B993F1EFD7E9700228F75 /* ThreadHelper.m in Sources */,
 				FAE725251F0696C3008D6E9A /* seeMoreViewController.m in Sources */,
 				1F3B993E1EFD7E9700228F75 /* HttpClient.m in Sources */,

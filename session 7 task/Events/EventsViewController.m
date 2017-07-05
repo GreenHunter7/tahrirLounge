@@ -108,11 +108,7 @@
     EventModel *event=[webServiceArray objectAtIndex:indexPath.row];
    
     
-    [UIImage downloadImageURL:event.eventImage onSuccess:^(UIImage * _Nullable image) {
-        cell.eventImage.image=image;
-    } andFailure:^(NSString * _Nonnull error) {
-        NSLog(@"imageFailuer");
-    }];
+    
     
     [cell.imageLoader startAnimating];
     cell.imageLoader.hidden=NO;
