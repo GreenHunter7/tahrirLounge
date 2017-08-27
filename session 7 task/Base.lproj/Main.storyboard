@@ -254,8 +254,8 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IDw-CM-ZCV">
                                                 <rect key="frame" x="-0.33333333333331439" y="0.0" width="117" height="96"/>
-                                                <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="25"/>
-                                                <state key="normal" title="Partners">
+                                                <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="17"/>
+                                                <state key="normal" title="Our Partners">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
@@ -951,7 +951,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AboutUs" translatesAutoresizingMaskIntoConstraints="NO" id="de6-h1-lh2">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ourTeam" translatesAutoresizingMaskIntoConstraints="NO" id="de6-h1-lh2">
                                                     <rect key="frame" x="41" y="4" width="35" height="35"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="35" id="QaJ-Ic-XGp"/>
@@ -988,13 +988,13 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AboutUs" translatesAutoresizingMaskIntoConstraints="NO" id="poh-GC-1A2">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Partners" translatesAutoresizingMaskIntoConstraints="NO" id="poh-GC-1A2">
                                                     <rect key="frame" x="41" y="4" width="35" height="35"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="35" id="saU-7d-0ZV"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Partners" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZIg-rN-pe0">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Our Partners" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZIg-rN-pe0">
                                                     <rect key="frame" x="89" y="8" width="150" height="26"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="ExG-QE-qDF"/>
@@ -2009,29 +2009,20 @@ Tahrir Lounge is a neutral project and all its activities are supported by Germa
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="8" translatesAutoresizingMaskIntoConstraints="NO" id="Wcg-X3-PRo">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cGH-yW-c08">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cGH-yW-c08">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="goethe" translatesAutoresizingMaskIntoConstraints="NO" id="vF6-IB-yXK">
-                                        <rect key="frame" x="20.333333333333343" y="61.000000000000014" width="373.33333333333337" height="135.33333333333337"/>
+                                        <rect key="frame" x="20.333333333333343" y="190.99999999999997" width="373.33333333333337" height="135.33333333333329"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="vF6-IB-yXK" secondAttribute="height" multiplier="69:25" id="Xtl-F8-ZRx"/>
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empthy" translatesAutoresizingMaskIntoConstraints="NO" id="Dit-QT-6ga">
-                                        <rect key="frame" x="20.333333333333343" y="210.33333333333331" width="373.33333333333337" height="127.99999999999994"/>
+                                        <rect key="frame" x="20.333333333333343" y="416.33333333333337" width="373.33333333333337" height="128.00000000000011"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="128" id="dxn-yR-CJQ"/>
                                         </constraints>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scc" translatesAutoresizingMaskIntoConstraints="NO" id="rxe-uA-Mnc">
-                                        <rect key="frame" x="21.333333333333343" y="316.33333333333331" width="372.33333333333337" height="186"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="186" id="nYY-vw-zvU"/>
-                                        </constraints>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="anna" translatesAutoresizingMaskIntoConstraints="NO" id="Xkj-MS-bDc">
-                                        <rect key="frame" x="-0.33333333333334281" y="472.00000000000006" width="414" height="200.33333333333343"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Our Partners" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jvq-0C-ggE">
                                         <rect key="frame" x="132" y="20" width="150" height="21"/>
@@ -2046,23 +2037,15 @@ Tahrir Lounge is a neutral project and all its activities are supported by Germa
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="Xkj-MS-bDc" firstAttribute="width" secondItem="cGH-yW-c08" secondAttribute="width" id="09n-lg-52S"/>
-                                    <constraint firstAttribute="bottom" secondItem="Xkj-MS-bDc" secondAttribute="bottom" id="2LI-sL-jfZ"/>
-                                    <constraint firstItem="vF6-IB-yXK" firstAttribute="top" secondItem="Jvq-0C-ggE" secondAttribute="bottom" constant="20" id="5AL-lc-MCp"/>
-                                    <constraint firstItem="rxe-uA-Mnc" firstAttribute="top" secondItem="vF6-IB-yXK" secondAttribute="bottom" constant="120" id="BCN-az-ZUO"/>
+                                    <constraint firstItem="vF6-IB-yXK" firstAttribute="top" secondItem="Jvq-0C-ggE" secondAttribute="bottom" constant="150" id="5AL-lc-MCp"/>
                                     <constraint firstItem="Dit-QT-6ga" firstAttribute="width" secondItem="cGH-yW-c08" secondAttribute="width" multiplier="90:100" id="COc-7h-q5r"/>
                                     <constraint firstItem="Jvq-0C-ggE" firstAttribute="top" secondItem="cGH-yW-c08" secondAttribute="top" constant="20" id="Hvi-R6-VTw"/>
                                     <constraint firstItem="vF6-IB-yXK" firstAttribute="centerX" secondItem="cGH-yW-c08" secondAttribute="centerX" id="JD7-Ye-LZd"/>
-                                    <constraint firstItem="Dit-QT-6ga" firstAttribute="top" secondItem="vF6-IB-yXK" secondAttribute="bottom" constant="14" id="QSK-2V-gAO"/>
+                                    <constraint firstItem="Dit-QT-6ga" firstAttribute="top" secondItem="vF6-IB-yXK" secondAttribute="bottom" constant="90" id="QSK-2V-gAO"/>
                                     <constraint firstItem="vF6-IB-yXK" firstAttribute="centerX" secondItem="Jvq-0C-ggE" secondAttribute="centerX" id="Yz3-xK-9sw"/>
                                     <constraint firstItem="vF6-IB-yXK" firstAttribute="width" secondItem="cGH-yW-c08" secondAttribute="width" multiplier="90:100" id="Zrf-JY-tib"/>
-                                    <constraint firstAttribute="bottom" secondItem="vF6-IB-yXK" secondAttribute="bottom" constant="476" id="hr9-Lo-AAf"/>
-                                    <constraint firstItem="rxe-uA-Mnc" firstAttribute="centerX" secondItem="cGH-yW-c08" secondAttribute="centerX" id="juO-0W-JWx"/>
-                                    <constraint firstAttribute="trailing" secondItem="Xkj-MS-bDc" secondAttribute="trailing" id="mB8-Qs-VhR"/>
                                     <constraint firstItem="Dit-QT-6ga" firstAttribute="centerX" secondItem="cGH-yW-c08" secondAttribute="centerX" id="rJy-nz-pL5"/>
-                                    <constraint firstItem="rxe-uA-Mnc" firstAttribute="width" secondItem="cGH-yW-c08" secondAttribute="width" multiplier="90:100" id="uoL-gz-KsS"/>
                                     <constraint firstAttribute="trailing" secondItem="vF6-IB-yXK" secondAttribute="trailing" constant="20" id="v5U-gU-YZe"/>
-                                    <constraint firstItem="Xkj-MS-bDc" firstAttribute="top" secondItem="rxe-uA-Mnc" secondAttribute="bottom" multiplier="90:100" constant="20" id="zhC-jT-nq8"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
@@ -2139,28 +2122,28 @@ Tahrir Lounge is a neutral project and all its activities are supported by Germa
         <image name="Marker Filled-50" width="50" height="50"/>
         <image name="Message Filled-50" width="50" height="50"/>
         <image name="News" width="50" height="50"/>
+        <image name="Partners" width="50" height="50"/>
         <image name="Phone" width="50" height="50"/>
         <image name="TL logo" width="9921" height="9921"/>
         <image name="YouTube" width="50" height="50"/>
-        <image name="anna" width="1128" height="432"/>
         <image name="empthy" width="300" height="105"/>
         <image name="faceBook" width="26" height="26"/>
         <image name="goethe" width="425" height="150"/>
         <image name="menu" width="50" height="50"/>
+        <image name="ourTeam" width="50" height="50"/>
         <image name="placeholder" width="420" height="420"/>
-        <image name="scc" width="591" height="524"/>
         <image name="twitter" width="64" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="eXF-hC-eQH"/>
-        <segue reference="eMI-wW-JyR"/>
-        <segue reference="Zwi-Uy-RAN"/>
-        <segue reference="KBa-OK-c0L"/>
-        <segue reference="bRO-A5-Pek"/>
         <segue reference="E8a-H4-aRR"/>
+        <segue reference="eXF-hC-eQH"/>
         <segue reference="uYq-MF-8x3"/>
+        <segue reference="KBa-OK-c0L"/>
+        <segue reference="arJ-yx-Wp3"/>
+        <segue reference="Zwi-Uy-RAN"/>
+        <segue reference="eCq-Qb-vj5"/>
+        <segue reference="bRO-A5-Pek"/>
         <segue reference="QqE-Zu-gRD"/>
-        <segue reference="T6u-HE-eDn"/>
-        <segue reference="VjT-74-z0f"/>
+        <segue reference="3Tg-zi-8DC"/>
     </inferredMetricsTieBreakers>
 </document>
