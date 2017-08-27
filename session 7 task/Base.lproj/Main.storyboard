@@ -1594,15 +1594,21 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TL logo" translatesAutoresizingMaskIntoConstraints="NO" id="ALC-0z-Ju9">
                                 <rect key="frame" x="0.0" y="64" width="414" height="368"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nMx-tJ-fzI">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="right" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nMx-tJ-fzI">
                                 <rect key="frame" x="10" y="298" width="394" height="407"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <string key="text">Tahrir Lounge is one of the Goethe institute projects in Cairo, it aims at helping youth to discover their talents, and improving their creativity to contribute to the change for better future, through conducting various activities in different fields. In addition the project is supporting youth initiatives and dynamic student activities which is seeking to play positive and active role in the society.
+                                <mutableString key="text">من نحن؟؟
+مشروع التحرير لاونج جوته هو أحد مشروعات المركز الثقافي الألماني بالقاهرة يساعد الشباب على اكتشاف مواهبهم وتنمية قدراتهم الإبداعية للمشاركة في التغيير للأفضل، وذلك عبر تنظيم فعاليات متنوعة في مختلف المجالات، إلى جانب ذلك يدعم التحرير لاونج جوته مبادرات الشباب وأنشطة الطلاب الجادة التي تسعى أن يكون لها دور إيجابي وفعال في المجتمع.
+ويعمل المشروع على إثراء المشهد الثقافي في المجتمع المصري من خلال تنظيم مجموعة من الورش والأنشطة الهادفة إلى رفع كفاءات العاملين بالقطاع الحكومي في مختلف المجالات الثقافية، إلى جانب بناء شراكات مع قطاعات حكومية في عدد من المحافظات، مما ينعكس على خلق بيئة ثقافية خصبة للمجتمع المصري.
+التحرير لاونج جوته مشروع حيادي غير هادف للربح وجميع أنشطته منح مدعومة من وزارة الخارجية الألمانية، ويعمل تحت مظلة الاتفاقية الثقافية بين مصر وألمانيا.
 
+
+Who we are?
+Tahrir Lounge is one of the Goethe institute projects in Cairo, it aims at helping youth to discover their talents, and improving their creativity to contribute to the change for better future, through conducting various activities in different fields. In addition the project is supporting youth initiatives and dynamic student activities which is seeking to play positive and active role in the society.
 The project enriches the culture scene in the Egyptian society, by organizing various workshops and activities to build the capacity of the governmental employees in different cultural fields. In addition, the project establishes partnerships with different governmental sector in a number of governorates, which reflects on creating rich culture environment for the Egyptian society.
-Tahrir Lounge is a neutral project and all its activities are supported by German foreign office. The project works under the umbrella of the cultural agreement between Egypt and Germany</string>
+Tahrir Lounge is a neutral project and all its activities are supported by German foreign office. The project works under the umbrella of the cultural agreement between Egypt and Germany.</mutableString>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
