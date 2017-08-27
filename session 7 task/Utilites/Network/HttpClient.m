@@ -126,6 +126,7 @@ customContentTypeValueForHTTPHeaderField:(id _Nullable)customContentTypeValueFor
                                                                          error:&error];
                     NSString *jsonRequest = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
                     
+                    NSLog(@"%@", jsonRequest);
                     
                     NSDictionary *parameters=params;
                     
