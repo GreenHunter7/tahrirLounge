@@ -102,7 +102,7 @@
 
 - (IBAction)call:(id)sender {
     
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tel:+20100100100"] options:@{} completionHandler:nil];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tel:+201274333113"] options:@{} completionHandler:nil];
     
     
     //[NSURL URLWithString:@"tel:+20100100100"]];
@@ -118,7 +118,7 @@
         mail.mailComposeDelegate = self;
         [mail setSubject:@"Subject"];
         [mail setMessageBody:@"Email From Tahrir Lounge ios App" isHTML:NO];
-        [mail setToRecipients:@[@"info@tahrirlounge.net"]];
+        [mail setToRecipients:@[@"tahrirlounge@gmail.com"]];
         
         [self presentViewController:mail animated:YES completion:NULL];
     }

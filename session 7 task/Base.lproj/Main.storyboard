@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -1274,7 +1274,7 @@
                                                 <rect key="frame" x="46" y="16" width="360" height="24"/>
                                                 <state key="normal">
                                                     <attributedString key="attributedTitle">
-                                                        <fragment content="+20100100100">
+                                                        <fragment content="+201274333113">
                                                             <attributes>
                                                                 <font key="NSFont" metaFont="system" size="15"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
@@ -1313,12 +1313,12 @@
                                                 <rect key="frame" x="46" y="16" width="360" height="24"/>
                                                 <state key="normal">
                                                     <attributedString key="attributedTitle">
-                                                        <fragment>
-                                                            <string key="content">info@tahrirlounge.net
-</string>
+                                                        <fragment content="tahrirlounge@gmail.com">
                                                             <attributes>
                                                                 <font key="NSFont" metaFont="system" size="15"/>
-                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="15" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                                                    <tabStops/>
+                                                                </paragraphStyle>
                                                             </attributes>
                                                         </fragment>
                                                     </attributedString>
@@ -1395,7 +1395,7 @@
                                                 <rect key="frame" x="46" y="16" width="360" height="24"/>
                                                 <state key="normal">
                                                     <attributedString key="attributedTitle">
-                                                        <fragment content="8 El-Boustan Street, Cairo">
+                                                        <fragment content="5 El-Boustan Street, Cairo">
                                                             <attributes>
                                                                 <font key="NSFont" metaFont="system" size="15"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
@@ -1431,7 +1431,7 @@
                                                 <rect key="frame" x="46" y="16" width="360" height="24"/>
                                                 <state key="normal">
                                                     <attributedString key="attributedTitle">
-                                                        <fragment content="09:00 - 16:00">
+                                                        <fragment content="10:00 - 18:00">
                                                             <attributes>
                                                                 <font key="NSFont" metaFont="system" size="15"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
