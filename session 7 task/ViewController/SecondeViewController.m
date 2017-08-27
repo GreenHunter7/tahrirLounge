@@ -25,7 +25,7 @@
     [self.myTable setDelegate:self];
     _myTable.dataSource=self;
     
-    menuItems = @[@"Home",@"About_Us",@"Events",@"Gallery",@"Contact_Us",@"FaceBook_Page",@"Twitter",@"YouTube",@"ourTeam",@"partners"];
+    menuItems = @[@"Home",@"About_Us",@"Events",@"Gallery",@"Contact_Us",@"FaceBook_Page",@"Twitter",@"YouTube",@"ourTeam",@"partners",@"aboutApp"];
 }
 
 - (void)didReceiveMemoryWarning {
