@@ -155,33 +155,7 @@
      
      
     
-    /*
-    teamMemberTableViewCell *cella = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (!cella){
-    
-    teamMemberTableViewCell *cella =[[teamMemberTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-    
-    cella.textLabel.text=teamMemberOBJ.memberName;
-    
-    NSString* imagePath=@"";
-    if(teamMemberOBJ.imagePath )
-    {
-        
-        imagePath=teamMemberOBJ.imagePath ;
-        NSURL* imageURL=[[NSURL alloc] initWithString:imagePath];
-        
-        NSData *imageData = [[NSData alloc] initWithContentsOfURL:imageURL];
-        UIImage *image = [[UIImage alloc] initWithData:imageData];
-        
 
-        
-        [cella.cellImage setImage:image];
-        
-        cella.cellImage.contentMode = UIViewContentModeScaleAspectFit;
-
-        
-        }
-    }*/
     return  cella;
 }
 
@@ -192,35 +166,26 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    
-    
-    NSInteger position=indexPath.row;
-    _selectedteamMemberOBJ=[teamMembers new];
-    _selectedteamMemberOBJ=[teammembersList objectAtIndex:position];
-    
-    /*
-     UITeamMemberDetail *viewTeamDetail=[[UITeamMemberDetail alloc] initWithNibName:@"UITeamMemberDetail" bundle:nil];
-     viewTeamDetail.teamMemberOBJ=teamMemberOBJ;
-     
-     
-     [self.navigationController pushViewController:viewTeamDetail animated:YES];
-     */
-    
-    
-    [self performSegueWithIdentifier:@"teamMemberDetail" sender:self];
-    
-    /*  Change Storyboard Active View
-     [self performSegueWithIdentifier:@"teamMemberDetail" sender:self];
-     */
-    
-    // [self performSegueWithIdentifier:@"teamMemberDetail" sender:self];
-    
-    //[self pushViewController:viewTeamDetail animated:YES];
-    
-    
-    NSLog(@" clicked : ");
+//       NSInteger position=indexPath.row;
+//    _selectedteamMemberOBJ=[teammembersList objectAtIndex:position];
+//    
+//    [self performSegueWithIdentifier:@"teamMemberDetail" sender:_selectedteamMemberOBJ];
+
 }
+
+
+
+
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+
+    // segue.destinationViewController;
+     
+     
+ }
+
 
 
 @end
