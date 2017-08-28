@@ -20,6 +20,7 @@
     
 }
 
+
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *sideBarButton;
 @property (weak, nonatomic) IBOutlet UITableView *eventsTableView;
 @property (weak, nonatomic) IBOutlet UIImageView *blurBackground;

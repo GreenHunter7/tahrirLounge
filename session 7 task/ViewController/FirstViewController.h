@@ -10,6 +10,8 @@
 
 @interface FirstViewController : UIViewController
 
+@property (weak) const NSString *apiUrl;
+
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
 
 @end
