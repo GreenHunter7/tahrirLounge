@@ -15,6 +15,7 @@
 #import "EventModel.h"
 #import "UIImage+Extension.h"
 #import "seeMoreViewController.h"
+#import "constants.h"
 
 @interface EventsViewController ()
 
@@ -28,8 +29,9 @@
     
     _eventsTableView.delegate = self;
     _eventsTableView.dataSource = self;
-    
-    
+	
+	
+	
     //-----
     navigationBarViewController *navigationBar = [navigationBarViewController new];
     
@@ -47,7 +49,8 @@
     hud.label.text=@"Loading";
     
     
-    NSString *apiUrl =@"http://tahrirlounge.net/event/api/events";
+	NSString *apiUrl = [[NSString alloc]initWithFormat:@"%@%@",API_URL,EVENTS];
+	
     HttpClient *httpClient=[HttpClient sharedInstance];
     [httpClient invokeAPI:apiUrl method:HTTPRequestGET parameters:nil paramterFormat:paramterStructureTypeFormData contentTypeValue:ContentTypeValue_None customContentTypeValueForHTTPHeaderField:nil onSuccess:^(NSData * _Nullable data) {
         

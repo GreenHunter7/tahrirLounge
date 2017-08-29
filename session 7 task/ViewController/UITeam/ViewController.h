@@ -15,7 +15,6 @@
     
 }
 
-@property (nonatomic)  teamMembers *selectedteamMemberOBJ;
 @property (weak, nonatomic) IBOutlet UITableView *listTeamView;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *sideBarButton;
 

@@ -13,7 +13,7 @@
 
 //#import "webService.h"
 //#import "teamMembers.h"
-
+#import "constants.h"
 #import "MBProgressHUD.h"
 #import "navigationBarViewController.h"
 
@@ -33,7 +33,7 @@
     
     [MBProgressHUD showHUDAddedTo:_listTeamView animated:YES];
     
-    NSString* apiURL=@"http://209.126.105.42:8001/iosapi/getAllTeamMembers";
+    NSString* apiURL=OUR_TEAM_API;
     
     HttpClient *httpClient = [HttpClient sharedInstance];
 

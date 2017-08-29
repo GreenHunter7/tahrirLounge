@@ -14,6 +14,7 @@
 #import "HttpClient.h"
 #import "UIImage+Extension.h"
 #import "GallerySecondeViewController.h"
+#import "constants.h"
 
 @interface GalleryViewController ()
 
@@ -36,7 +37,7 @@
     //ImageArry Contained the cells identifiers in row 0 and images identifiers in row 1 .
     [MBProgressHUD showHUDAddedTo:_ImagesCollectionView animated:YES];
     
-    NSString *api = @"http://tahrirlounge.net/event/api/workshops";
+	NSString *api = [[NSString alloc]initWithFormat:@"%@%@",API_URL,GALLERY];
     HttpClient *httpClient = [HttpClient sharedInstance];
     
     [httpClient invokeAPI:api method:HTTPRequestGET parameters:nil paramterFormat:paramterStructureTypeFormData contentTypeValue:ContentTypeValue_None customContentTypeValueForHTTPHeaderField:nil onSuccess:^(NSData * _Nullable data){

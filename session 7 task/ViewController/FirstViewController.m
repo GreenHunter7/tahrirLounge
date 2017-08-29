@@ -16,11 +16,13 @@
 
 @implementation FirstViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    
+	_apiUrl = @"http://tahrirlounge.net/event/api/";
+
 }
 
 - (void)didReceiveMemoryWarning {
