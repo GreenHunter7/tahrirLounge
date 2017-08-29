@@ -138,10 +138,10 @@
                                         <color key="backgroundColor" red="0.18716886639595032" green="0.87009125947952271" blue="0.75278836488723755" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="nPI-Hg-I3h" firstAttribute="height" secondItem="yef-Sj-yB0" secondAttribute="height" id="Jky-8X-7M4"/>
-                                            <constraint firstAttribute="height" constant="128" id="OcK-3G-wXL"/>
                                             <constraint firstItem="nPI-Hg-I3h" firstAttribute="width" secondItem="yef-Sj-yB0" secondAttribute="width" id="Q6O-OZ-2jo"/>
-                                            <constraint firstAttribute="width" secondItem="yef-Sj-yB0" secondAttribute="height" multiplier="35:32" id="WUv-Or-v0n"/>
+                                            <constraint firstAttribute="height" constant="128" id="bpZ-uw-Sgn"/>
                                             <constraint firstItem="nPI-Hg-I3h" firstAttribute="centerX" secondItem="yef-Sj-yB0" secondAttribute="centerX" id="jfG-N1-mgx"/>
+                                            <constraint firstAttribute="width" secondItem="yef-Sj-yB0" secondAttribute="height" multiplier="35:32" id="rZa-Qc-VmB"/>
                                             <constraint firstItem="nPI-Hg-I3h" firstAttribute="centerY" secondItem="yef-Sj-yB0" secondAttribute="centerY" id="vHP-TE-7wO"/>
                                         </constraints>
                                     </view>
@@ -250,10 +250,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zJa-MY-vuw" userLabel="Partners">
-                                        <rect key="frame" x="287" y="504" width="105" height="99"/>
+                                        <rect key="frame" x="287" y="504" width="105" height="80"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IDw-CM-ZCV">
-                                                <rect key="frame" x="0.0" y="0.0" width="105" height="99"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="105" height="80"/>
                                                 <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="10"/>
                                                 <state key="normal" title="Our Partners">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -265,11 +265,11 @@
                                         </subviews>
                                         <color key="backgroundColor" red="0.86583914974619292" green="0.45453473636026664" blue="0.4139447386248955" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
+                                            <constraint firstAttribute="width" secondItem="zJa-MY-vuw" secondAttribute="height" multiplier="21:16" id="JJc-4J-YIO"/>
                                             <constraint firstItem="IDw-CM-ZCV" firstAttribute="height" secondItem="zJa-MY-vuw" secondAttribute="height" id="Q4K-uh-9Bl"/>
                                             <constraint firstItem="IDw-CM-ZCV" firstAttribute="centerX" secondItem="zJa-MY-vuw" secondAttribute="centerX" id="VLK-Zg-xC1"/>
                                             <constraint firstItem="IDw-CM-ZCV" firstAttribute="centerY" secondItem="zJa-MY-vuw" secondAttribute="centerY" id="ck6-D1-PGF"/>
-                                            <constraint firstAttribute="height" constant="99" id="npi-01-BBZ"/>
-                                            <constraint firstAttribute="width" secondItem="zJa-MY-vuw" secondAttribute="height" multiplier="35:33" id="sDn-Cd-iUl"/>
+                                            <constraint firstAttribute="height" constant="80" id="qj9-9m-vYL"/>
                                             <constraint firstItem="IDw-CM-ZCV" firstAttribute="width" secondItem="zJa-MY-vuw" secondAttribute="width" id="tDL-Wb-7vH"/>
                                         </constraints>
                                     </view>

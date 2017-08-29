@@ -7,18 +7,14 @@
 //
 
 #import "teamMembers.h"
-#import "webService.h"
+
 
 
 @implementation teamMembers
 
 +(NSMutableArray*) getAllTeamMembers :(NSArray *) res
 {
-//    webService* service=[webService new];
-//    NSString* apiURL=@"http://209.126.105.42:8001/iosapi/getAllTeamMembers";
-//    
-//    NSArray *res=[service returnDataFromAPI:apiURL];
-//    
+	
    NSMutableArray *returnData=[NSMutableArray new];
     
     for (NSArray *recipeArray in res)

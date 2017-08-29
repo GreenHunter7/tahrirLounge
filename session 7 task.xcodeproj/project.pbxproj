@@ -36,12 +36,11 @@
 		D0D8B77A1F5343A000AB40CB /* SecondeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D8B74E1F5343A000AB40CB /* SecondeViewController.m */; };
 		D0D8B77B1F5343A000AB40CB /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D8B7501F5343A000AB40CB /* SWRevealViewController.m */; };
 		D0D8B77C1F5343A000AB40CB /* TwitterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D8B7531F5343A000AB40CB /* TwitterViewController.m */; };
-		D0D8B77D1F5343A000AB40CB /* teamMembers.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D8B7561F5343A000AB40CB /* teamMembers.m */; };
 		D0D8B77E1F5343A000AB40CB /* teamMemberTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D8B7581F5343A000AB40CB /* teamMemberTableViewCell.m */; };
 		D0D8B77F1F5343A000AB40CB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D8B75A1F5343A000AB40CB /* ViewController.m */; };
-		D0D8B7801F5343A000AB40CB /* webService.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D8B75C1F5343A000AB40CB /* webService.m */; };
 		D0D8B7811F5343A000AB40CB /* youTubeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D8B75F1F5343A000AB40CB /* youTubeViewController.m */; };
 		FA0C3C8B1F5345DB008EE061 /* ApoutAppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0C3C8A1F5345DB008EE061 /* ApoutAppViewController.m */; };
+		FAACC0BA1F54E7F300722DE0 /* teamMembers.m in Sources */ = {isa = PBXBuildFile; fileRef = FAACC0B91F54E7F300722DE0 /* teamMembers.m */; };
 		FAFF1A0E1EB92A5B00D12ECE /* session_7_taskTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFF1A0D1EB92A5B00D12ECE /* session_7_taskTests.m */; };
 		FAFF1A191EB92A5B00D12ECE /* session_7_taskUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFF1A181EB92A5B00D12ECE /* session_7_taskUITests.m */; };
 /* End PBXBuildFile section */
@@ -117,18 +116,16 @@
 		D0D8B7501F5343A000AB40CB /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		D0D8B7521F5343A000AB40CB /* TwitterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterViewController.h; sourceTree = "<group>"; };
 		D0D8B7531F5343A000AB40CB /* TwitterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterViewController.m; sourceTree = "<group>"; };
-		D0D8B7551F5343A000AB40CB /* teamMembers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = teamMembers.h; sourceTree = "<group>"; };
-		D0D8B7561F5343A000AB40CB /* teamMembers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = teamMembers.m; sourceTree = "<group>"; };
 		D0D8B7571F5343A000AB40CB /* teamMemberTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = teamMemberTableViewCell.h; sourceTree = "<group>"; };
 		D0D8B7581F5343A000AB40CB /* teamMemberTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = teamMemberTableViewCell.m; sourceTree = "<group>"; };
 		D0D8B7591F5343A000AB40CB /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		D0D8B75A1F5343A000AB40CB /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		D0D8B75B1F5343A000AB40CB /* webService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = webService.h; sourceTree = "<group>"; };
-		D0D8B75C1F5343A000AB40CB /* webService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = webService.m; sourceTree = "<group>"; };
 		D0D8B75E1F5343A000AB40CB /* youTubeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = youTubeViewController.h; sourceTree = "<group>"; };
 		D0D8B75F1F5343A000AB40CB /* youTubeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = youTubeViewController.m; sourceTree = "<group>"; };
 		FA0C3C891F5345DB008EE061 /* ApoutAppViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApoutAppViewController.h; sourceTree = "<group>"; };
 		FA0C3C8A1F5345DB008EE061 /* ApoutAppViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApoutAppViewController.m; sourceTree = "<group>"; };
+		FAACC0B81F54E7F300722DE0 /* teamMembers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = teamMembers.h; sourceTree = "<group>"; };
+		FAACC0B91F54E7F300722DE0 /* teamMembers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = teamMembers.m; sourceTree = "<group>"; };
 		FAF76F681F54D957009F4BE5 /* constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = constants.h; sourceTree = "<group>"; };
 		FAFF19F01EB92A5A00D12ECE /* session 7 task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "session 7 task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAFF1A091EB92A5B00D12ECE /* session 7 taskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "session 7 taskTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -352,14 +349,12 @@
 		D0D8B7541F5343A000AB40CB /* UITeam */ = {
 			isa = PBXGroup;
 			children = (
-				D0D8B7551F5343A000AB40CB /* teamMembers.h */,
-				D0D8B7561F5343A000AB40CB /* teamMembers.m */,
+				FAACC0B81F54E7F300722DE0 /* teamMembers.h */,
+				FAACC0B91F54E7F300722DE0 /* teamMembers.m */,
 				D0D8B7571F5343A000AB40CB /* teamMemberTableViewCell.h */,
 				D0D8B7581F5343A000AB40CB /* teamMemberTableViewCell.m */,
 				D0D8B7591F5343A000AB40CB /* ViewController.h */,
 				D0D8B75A1F5343A000AB40CB /* ViewController.m */,
-				D0D8B75B1F5343A000AB40CB /* webService.h */,
-				D0D8B75C1F5343A000AB40CB /* webService.m */,
 			);
 			path = UITeam;
 			sourceTree = "<group>";
@@ -546,7 +541,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0D8B7701F5343A000AB40CB /* EventsViewController.m in Sources */,
-				D0D8B77D1F5343A000AB40CB /* teamMembers.m in Sources */,
 				D0D8B7811F5343A000AB40CB /* youTubeViewController.m in Sources */,
 				D0D8B77B1F5343A000AB40CB /* SWRevealViewController.m in Sources */,
 				D0D8B7651F5343A000AB40CB /* main.m in Sources */,
@@ -570,12 +564,12 @@
 				D0D8B76A1F5343A000AB40CB /* ThreadHelper.m in Sources */,
 				D0D8B7681F5343A000AB40CB /* MBProgressHUD.m in Sources */,
 				D0D8B7771F5343A000AB40CB /* SecondCollectionViewCell.m in Sources */,
+				FAACC0BA1F54E7F300722DE0 /* teamMembers.m in Sources */,
 				D0D8B76E1F5343A000AB40CB /* ContactUsViewController.m in Sources */,
 				D0D8B7751F5343A000AB40CB /* GallerySecondeViewController.m in Sources */,
 				D0D8B7781F5343A000AB40CB /* navigationBarViewController.m in Sources */,
 				D0D8B77A1F5343A000AB40CB /* SecondeViewController.m in Sources */,
 				D0D8B7691F5343A000AB40CB /* HttpClient.m in Sources */,
-				D0D8B7801F5343A000AB40CB /* webService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

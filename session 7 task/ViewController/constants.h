@@ -8,3 +8,5 @@
 #define API_URL @"http://tahrirlounge.net/event/api/"
 #define EVENTS @"events"
 #define GALLERY @"workshops"
+
+#define OUR_TEAM_API @"http://209.126.105.42:8001/iosapi/getAllTeamMembers"
