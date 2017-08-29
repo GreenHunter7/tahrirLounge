@@ -310,10 +310,10 @@
 			children = (
 				D0D8B73F1F5343A000AB40CB /* GalleryCellCollectionViewCell.h */,
 				D0D8B7401F5343A000AB40CB /* GalleryCellCollectionViewCell.m */,
-				D0D8B7411F5343A000AB40CB /* GallerySecondeViewController.h */,
-				D0D8B7421F5343A000AB40CB /* GallerySecondeViewController.m */,
 				D0D8B7431F5343A000AB40CB /* GalleryViewController.h */,
 				D0D8B7441F5343A000AB40CB /* GalleryViewController.m */,
+				D0D8B7411F5343A000AB40CB /* GallerySecondeViewController.h */,
+				D0D8B7421F5343A000AB40CB /* GallerySecondeViewController.m */,
 				D0D8B7451F5343A000AB40CB /* SecondCollectionViewCell.h */,
 				D0D8B7461F5343A000AB40CB /* SecondCollectionViewCell.m */,
 			);
