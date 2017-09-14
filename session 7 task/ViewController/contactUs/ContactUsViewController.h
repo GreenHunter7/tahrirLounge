@@ -16,6 +16,7 @@
     CLLocationManager *locationManager;
     CLLocation *currentLocation;
 }
+@property (weak, nonatomic) IBOutlet UIView *whiteBackgrond;
 
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *sideBarButton;
 

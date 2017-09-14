@@ -49,6 +49,7 @@
     [self getCurrentLocation];
     
     locationManager =[CLLocationManager new];
+	self.whiteBackgrond.layer.cornerRadius = 50;
 }
 
 
