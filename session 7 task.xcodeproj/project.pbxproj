@@ -473,7 +473,8 @@
 				TargetAttributes = {
 					FAFF19EF1EB92A5A00D12ECE = {
 						CreatedOnToolsVersion = 8.3.1;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = UA98S3ZS39;
+						ProvisioningStyle = Manual;
 					};
 					FAFF1A081EB92A5B00D12ECE = {
 						CreatedOnToolsVersion = 8.3.1;
@@ -720,12 +721,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = UA98S3ZS39;
 				INFOPLIST_FILE = "session 7 task/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Root.session-7-task";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tahrirlounge.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				PROVISIONING_PROFILE = "82e0c448-4ec3-4f6b-809b-36f58dd55004";
+				PROVISIONING_PROFILE_SPECIFIER = Tahrir_AppStore;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -733,12 +738,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = UA98S3ZS39;
 				INFOPLIST_FILE = "session 7 task/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Root.session-7-task";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tahrirlounge.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				PROVISIONING_PROFILE = "82e0c448-4ec3-4f6b-809b-36f58dd55004";
+				PROVISIONING_PROFILE_SPECIFIER = Tahrir_AppStore;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
