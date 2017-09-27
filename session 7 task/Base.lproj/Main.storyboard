@@ -1,16 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="GeezaPro.ttc">
+            <string>GeezaPro-Bold</string>
+        </array>
+        <array key="VerdanaBold.ttf">
+            <string>Verdana-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Reveal View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -374,7 +382,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="24g-dO-cgH">
-                                <rect key="frame" x="20" y="0.0" width="374" height="736"/>
+                                <rect key="frame" x="20" y="44" width="374" height="648"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </webView>
                         </subviews>
@@ -764,7 +772,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Events" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aUc-wb-Bj0">
-                                                    <rect key="frame" x="89" y="9" width="63" height="26"/>
+                                                    <rect key="frame" x="89" y="9" width="61.666666666666657" height="26"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -1300,7 +1308,7 @@
                     <toolbarItems/>
                     <value key="contentSizeForViewInPopover" type="size" width="320" height="736"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="CRg-lp-b4Y">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1591,7 +1599,7 @@
                     <toolbarItems/>
                     <value key="contentSizeForViewInPopover" type="size" width="320" height="736"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="XYH-5v-0sQ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1669,7 +1677,7 @@ Tahrir Lounge is a neutral project and all its activities are supported by Germa
                     <toolbarItems/>
                     <value key="contentSizeForViewInPopover" type="size" width="320" height="736"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="cfq-xQ-P1b">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1694,7 +1702,7 @@ Tahrir Lounge is a neutral project and all its activities are supported by Germa
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="slR-RD-Xro">
-                                <rect key="frame" x="0.0" y="64" width="414" height="628"/>
+                                <rect key="frame" x="0.0" y="84" width="414" height="608"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </webView>
                         </subviews>
@@ -1736,7 +1744,7 @@ Tahrir Lounge is a neutral project and all its activities are supported by Germa
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mf3-nU-Bp3">
-                                <rect key="frame" x="20" y="132" width="374" height="589"/>
+                                <rect key="frame" x="20" y="132" width="374" height="545"/>
                                 <color key="backgroundColor" red="0.17098185420000001" green="0.32455235719999997" blue="0.64859491589999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="374" id="f50-zE-oB5"/>
@@ -1851,7 +1859,7 @@ Tahrir Lounge is a neutral project and all its activities are supported by Germa
                     <toolbarItems/>
                     <value key="contentSizeForViewInPopover" type="size" width="320" height="736"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="DgU-3e-CNT">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1870,7 +1878,7 @@ Tahrir Lounge is a neutral project and all its activities are supported by Germa
                     <toolbarItems/>
                     <value key="contentSizeForViewInPopover" type="size" width="320" height="736"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="DaF-M3-i4z">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1889,7 +1897,7 @@ Tahrir Lounge is a neutral project and all its activities are supported by Germa
                     <toolbarItems/>
                     <value key="contentSizeForViewInPopover" type="size" width="320" height="736"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="XQr-H8-PD0">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1908,7 +1916,7 @@ Tahrir Lounge is a neutral project and all its activities are supported by Germa
                     <toolbarItems/>
                     <value key="contentSizeForViewInPopover" type="size" width="320" height="736"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="fPn-27-b01">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -2042,7 +2050,7 @@ Tahrir Lounge is a neutral project and all its activities are supported by Germa
                     <toolbarItems/>
                     <value key="contentSizeForViewInPopover" type="size" width="320" height="736"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="uZg-7c-M4o">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -2135,7 +2143,7 @@ Tahrir Lounge is a neutral project and all its activities are supported by Germa
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j6T-0b-7X1">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j6T-0b-7X1">
                                 <rect key="frame" x="42" y="64" width="330" height="628"/>
                                 <color key="backgroundColor" red="0.9861351612" green="0.9896013709" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <attributedString key="attributedText">
@@ -2439,7 +2447,7 @@ Cg
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5GP-MG-YX5" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="dFd-Pq-aEj">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -2457,7 +2465,7 @@ Cg
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CWd-mN-WCw" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="aaA-hw-2rk">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -2475,7 +2483,7 @@ Cg
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TQB-rr-w0w" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="yxQ-7N-aDZ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -2515,15 +2523,15 @@ Cg
         <image name="twitter" width="64" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="arJ-yx-Wp3"/>
-        <segue reference="eXF-hC-eQH"/>
-        <segue reference="Zwi-Uy-RAN"/>
-        <segue reference="E8a-H4-aRR"/>
-        <segue reference="QqE-Zu-gRD"/>
-        <segue reference="3Tg-zi-8DC"/>
-        <segue reference="uYq-MF-8x3"/>
         <segue reference="KBa-OK-c0L"/>
+        <segue reference="QqE-Zu-gRD"/>
         <segue reference="bRO-A5-Pek"/>
+        <segue reference="E8a-H4-aRR"/>
+        <segue reference="uYq-MF-8x3"/>
+        <segue reference="eXF-hC-eQH"/>
+        <segue reference="3Tg-zi-8DC"/>
+        <segue reference="arJ-yx-Wp3"/>
         <segue reference="eCq-Qb-vj5"/>
+        <segue reference="Zwi-Uy-RAN"/>
     </inferredMetricsTieBreakers>
 </document>

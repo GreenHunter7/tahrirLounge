@@ -20,7 +20,7 @@
     // Do any additional setup after loading the view.
 	navigationBarViewController *navBar = [navigationBarViewController new];
 	[navBar customSetup:_menuButton :self ];
-	[navBar customizeNavigation:_menuButton :self :[UIColor colorWithRed:41.0/255 green:77.0/255 blue:151.0/255 alpha:1] :@"Apout App"];
+	[navBar customizeNavigation:_menuButton :self :[UIColor colorWithRed:41.0/255 green:77.0/255 blue:151.0/255 alpha:1] :@"About App"];
 	
 	_textView.layer.shadowOpacity = 0.6f;
 }
